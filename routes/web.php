@@ -25,7 +25,7 @@ Route::get('notes', 'NotesController@index');
 Route::get('notes/{id}/destroy', 'NotesController@destroy')->name('notes.destroy');
 
 Route::get('/alumno', 'AlumnoController@index');
-Route::get('/admin', 'adminController@index');
+Route::get('/admin', 'AdminController@index');
 Route::get('/div_estudios', 'divisionController@index');
 
 Route::get('/alumno/veralumnos', 'AlumnoController@veralumnos')->name('veralumnos');
