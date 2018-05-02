@@ -15,7 +15,7 @@
             html, body {
                 height: 100%;
                 width: 100%;
-                background: url('../images/fondo.jpg');
+                background: url('public/images/fondo.jpg');
                 background-origin: content-box;
                 background-attachment: relative;
                 background-position: center center;
