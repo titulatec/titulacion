@@ -79,7 +79,7 @@ class RegisterController extends Controller
         }
         else{
 
-            return view ('errores.errorpag');
+            return back();
         }
 
 
