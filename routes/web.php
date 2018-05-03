@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-
+URL::forceRootUrl('http://titulatec.jimvps/titulacion/public');
 
 Auth::routes();
 
