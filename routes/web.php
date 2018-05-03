@@ -34,6 +34,6 @@ Route::get('/subir', function () {
     return view('admin.subir_alum');
 });
 
-Route::post('/cargar_datos_usuarios', 'adminController@cargar_datos_usuarios');
+Route::post('/cargar_datos_usuarios', 'AdminController@cargar_datos_usuarios');
 
 Route::post('/registrar_proyecto', 'AlumnoController@registrar_proyecto');
