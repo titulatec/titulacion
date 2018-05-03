@@ -28,7 +28,7 @@ Route::get('/div_estudios', 'divisionController@index');
 
 Route::get('/alumno/veralumnos', 'AlumnoController@veralumnos')->name('veralumnos');
 
-Route::post('/registro', 'adminController@agregar_personal');
+Route::post('/registro', 'AdminController@agregar_personal');
 
 Route::get('/subir', function () {
     return view('admin.subir_alum');
