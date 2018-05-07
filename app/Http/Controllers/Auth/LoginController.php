@@ -47,7 +47,7 @@ class LoginController extends Controller
 
     public function redirectPath()
     {
-        if (Auth::user()->rol=='Alumno') {
+        if (Auth::user()->rol=='alum') {
             return '/alumno';
         }
 

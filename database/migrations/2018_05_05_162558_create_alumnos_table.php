@@ -23,8 +23,7 @@ class CreateAlumnosTable extends Migration
             $table->string('telefono');
             $table->string('mail');
             $table->string('plan_estud');
-
-            
+            $table->string('registrado');
             $table->timestamps();
         });
     }

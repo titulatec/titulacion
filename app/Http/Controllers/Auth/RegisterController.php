@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Alumno;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -64,22 +65,33 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {   
-        $alumno = DB::table('alumnos')->where('no_control', $data['no_control'])->get()->first();
+        $mensaje1="Se ha registrado con éxito";
+        $mensaje2="No se ha podido completar tu registro, por favor dirigete al departamento de division de estudios";
 
-        if ($alumno !=""){
+       // $alumno = DB::table('alumnos')->where('no_control', $data['no_control'])->get()->first();
+        $alumno = Alumno::where('no_control','=',$data['no_control'])->where('registrado','=','N')->get()->first(); 
+
+
+        if ($alumno!=""){
 
         //echo $alumno;
 
-        return User::create([
-            'name' => $alumno->nombre,
-            'email' => $alumno->mail,
+        User::create([
+            'name' => $data['nombre'],
+            'email' => $data['email'],
+            'rol' => 'alum',
             'password' => bcrypt($data['password']),
             
         ]);
+
+        $actualizar= Alumno::find($alumno->id);
+        $actualizar->registrado='S';
+        $actualizar->save();
+
+            return $mensaje1;
         }
         else{
-
-            return back();
+            return $mensaje2;
         }
 
 
