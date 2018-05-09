@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-// soy java 100%
+// soy java 100% real no fake
 
 Auth::routes();
 
