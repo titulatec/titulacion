@@ -10,13 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
- //hola Titulatec :)
-// hola jim
-Route::get('/', function () {
-    return view('index');
-});
 
-Route::get('/homedos', function () {
+Route::get('/', function () {
     return view('index');
 });
 
