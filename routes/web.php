@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-// soy java
+// soy java nuevo
 
 Auth::routes();
 
