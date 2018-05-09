@@ -11,6 +11,7 @@
 |
 */
  //hola Titulatec :)
+// hola jim
 Route::get('/', function () {
     return view('index');
 });
