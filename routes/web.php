@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+// soy java
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
