@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+ //hola Titulatec :)
 Route::get('/', function () {
     return view('index');
 });
