@@ -63,6 +63,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Acceso
                                 </button>
+                                
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     ¿Olvidaste tu contraseña?
@@ -70,6 +71,10 @@
                             </div>
                         </div>
                     </form>
+
+                    {!! Form::open( array ('url'=> '/', 'method'=> 'GET'))!!}
+                    {!! Form::submit('Regresar', ['class' => 'btn btn-danger pull-right']) !!}
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

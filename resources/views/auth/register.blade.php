@@ -27,6 +27,9 @@
                        
                         {!! Form::submit('Registrar', ['class' => 'btn btn-success']) !!}
                     {!! Form::close() !!}
+                    {!! Form::open( array ('url'=> '/', 'method'=> 'GET'))!!}
+                    {!! Form::submit('Regresar', ['class' => 'btn btn-danger pull-right']) !!}
+                    {!! Form::close() !!}
                     
                 </div>
             </div>
