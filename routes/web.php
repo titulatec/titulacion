@@ -28,7 +28,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 //============================================================================
 
 //Bloque para Araceli ==========================================================
-
+Route::get('/div_estudios', 'divisionController@index');
+Route::post('/registro', 'divisionController@agregar_foraneo');
 
 //===========================================================================
 
