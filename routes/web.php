@@ -55,6 +55,8 @@ Route::post('/registro', 'AdminController@agregar_personal');
 Route::post('/cargar_datos_usuarios', 'AdminController@cargar_datos_usuarios');
 
 Route::post('/registrar_proyecto', 'AlumnoController@registrar_proyecto');
+
+//Comentario nuevo de jaime
 //===========================================================================
 
 
