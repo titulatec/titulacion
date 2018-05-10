@@ -21,6 +21,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Bloque para Alma ============================================================
+//Route::get('/Profesores', 'AcadController@index');
 
 
 //============================================================================
