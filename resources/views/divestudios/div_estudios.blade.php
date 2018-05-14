@@ -1,8 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+<nav class="navhar navbar-default">
+    <div class="container">
 
-<h1>Si entro a division de estudios</h1>]
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target="bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="ico-bar"></span>
+            <span class="ico-bar"></span>
+            <span class="ico-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Division de Estudios</a>
+        </div>
 
 <div class="collapse navbar-collapse" id="bs-example-nabar-collage-1">
 	<ul class="nav navbar-nav">
@@ -12,7 +22,7 @@
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
 			aria-haspopup="true" aria-expanded="false">MENU <span class="caret"></span></a>
 			<ul class="dropdown-menu">
-				<li><a href="#">Solicutudes</a></li>
+				<li><a href="{{ action('divisionController@index')}}">Solicutudes</a></li>
 				<li><<a href="#">Residencias</a></li>
 				</li>
 				<li><<a href="#">Solictud Foraneos</a></li>
@@ -22,7 +32,6 @@
 </div>
 </div>
 </nav>
-
 
 <div class="container centrado-porcentual">
     <div class="row">
@@ -41,10 +50,7 @@
                         {!! Field::text('optitulacion' , ['label'=>'Opciontitulacion'] )!!}
                         {!! Field::email('solicitud' , ['label'=>'Solicitud'] )!!}
                         {!! Field::text('tel' , ['label'=>'Tel'] )!!}
-
-
-
-                        {!! Field::password('carrera' , ['label'=>'Carrera'] )!!}
+                        {!! Field::password('carrera' , ['label'=>'Plan de Estudios'] )!!}
                         {!! Field::password('tipo' , ['label'=>'Tipo'] )!!}
                        
                         {!! Form::submit('Registrar', ['class' => 'btn btn-success']) !!}
