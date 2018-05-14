@@ -34,6 +34,10 @@ class divisionController extends Controller
        //return view ('alumno.alumno');
     }
 
+    public function fora()
+    {
+        return view('divestudios.fora');
+    }
 
 
 }

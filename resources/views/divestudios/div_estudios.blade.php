@@ -25,7 +25,7 @@
 				<li><a href="{{ action('divisionController@index')}}">Solicutudes</a></li>
 				<li><<a href="#">Residencias</a></li>
 				</li>
-				<li><<a href="#">Solictud Foraneos</a></li>
+				<li><<a href="{{ action('divisionController@fora')}}">Solictud Foraneos</a></li>
 			</ul>
 		</li>
 	</ul>
@@ -33,36 +33,5 @@
 </div>
 </nav>
 
-<div class="container centrado-porcentual">
-    <div class="row">
-        <div class="container col-md-4 col-md-offset-4">
-            <div class="panel panel-primary">
-
-                <div class="panel-heading">Registrar Foraneos</div>
-                @include('flash::message')
-
-                <div class="panel-body">
-                    {{ csrf_field() }}
-                    {!! Form::open( array ('url'=> 'registro', 'method'=> 'POST'))!!}
-                        {!! Field::text('nc' , ['label'=>'NC'] )!!}
-                        {!! Field::text('name' , ['label'=>'Nombre'] )!!}
-                        {!! Field::text('carrera' , ['label'=>'Carrera'] )!!}
-                        {!! Field::text('optitulacion' , ['label'=>'Opciontitulacion'] )!!}
-                        {!! Field::email('solicitud' , ['label'=>'Solicitud'] )!!}
-                        {!! Field::text('tel' , ['label'=>'Tel'] )!!}
-                        {!! Field::password('carrera' , ['label'=>'Plan de Estudios'] )!!}
-                        {!! Field::password('tipo' , ['label'=>'Tipo'] )!!}
-                       
-                        {!! Form::submit('Registrar', ['class' => 'btn btn-success']) !!}
-                    {!! Form::close() !!}
-                    
-                </div>
-            </div>
-        </div>
-
-
-
-    </div>
-</div>
 
 @endsection
