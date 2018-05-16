@@ -21,8 +21,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Bloque para Alma ============================================================
-//Route::get('/Profesores', 'AcadController@index');
-//Route::get('/JefeDepto', 'AcadController@index');
+Route::get('/deptoacad', 'AcadControler@index');
+Route::get('/proyectos', 'AcadControler@proyectos');
+Route::post('/nuevoreg', 'AcadControler@agregar_asesores');
 
 
 //============================================================================
