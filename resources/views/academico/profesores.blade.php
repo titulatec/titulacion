@@ -21,16 +21,48 @@
                         </ul>
                       </li>
                     </ul>
-                    <ul class="nav navbar-nav">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profesores <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="{{ action('AcadControler@profesores')}}">Lista de Profesores</a></li>
-                        </ul>
-                      </li>
-                    </ul>
                   </div>
                   </div>
             </nav>
+</div>
+
+
+<div class="container centrado-porcentual">
+  <div class="panel panel-primary">
+
+
+    <div class="page-heading">
+            <h1>Profesores</h1>
+    </div>
+
+  <div class="row">
+      <div class="col-md-5">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>RFC</th>
+              <th>Nombre Profesor</th>
+              <th>Tipo</th>
+              <th>Clave Departamento</th>
+              <th>Producto</th>
+              <th>No de control</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>CUCE12354f</td>
+              <td>Elsa Cuevas</td>
+              <td>A</td>
+              <td>ISC</td>
+              <td>Proyecto</td>
+              <td>14590544</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+
+  </div>
 </div>
 @endsection
