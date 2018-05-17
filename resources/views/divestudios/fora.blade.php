@@ -18,8 +18,8 @@
                         {!! Field::text('nc' , ['label'=>'NC'] )!!}
                         {!! Field::text('name' , ['label'=>'Nombre'] )!!}
                         {!! Field::text('carrera' , ['label'=>'Carrera'] )!!}
-                        {!! Field::text('optitulacion' , ['label'=>'Opciontitulacion'] )!!}
-                        {!! Field::email('solicitud' , ['label'=>'Solicitud'] )!!}
+                        {!! Field::text('optitulacion' , ['label'=>'Opcion Titulacion'] )!!}
+                        {!! Field::text('producto' , ['label'=>'Producto'] )!!}
                         {!! Field::text('tel' , ['label'=>'Tel'] )!!}
                         {!! Field::password('carrera' , ['label'=>'Plan de Estudios'] )!!}
                         {!! Field::password('tipo' , ['label'=>'Tipo'] )!!}

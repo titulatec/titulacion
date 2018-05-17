@@ -11,7 +11,7 @@
             <span class="ico-bar"></span>
             <span class="ico-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Division de Estudios</a>
+        <a class="navbar-brand" href="{{ action('divisionController@index')}}">Division de Estudios</a>
         </div>
 
 <div class="collapse navbar-collapse" id="bs-example-nabar-collage-1">
