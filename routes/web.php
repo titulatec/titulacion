@@ -55,7 +55,7 @@ Route::get('/admin', 'AdminController@index');
 
 Route::get('/alumno/veralumnos', 'AlumnoController@veralumnos')->name('veralumnos');
 
-Route::post('/registro', 'AdminController@agregar_personal');
+Route::post('/alum_registro', 'AdminController@agregar_personal');
 
 Route::post('/cargar_datos_usuarios', 'AdminController@cargar_datos_usuarios');
 
