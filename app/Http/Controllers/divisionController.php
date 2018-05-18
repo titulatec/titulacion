@@ -13,25 +13,14 @@ class divisionController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('is_division');
     }
 
     public function index(){
- 
-     $tipo = Auth::user()->rol;
-        //$tipo='alumno';
-        if ($tipo=='div'){
 
-        //$productoT = producto2010::all();
-        //return view('alumno',compact('productoT'));
 
         return view ('divestudios.div_estudios');
-        }
-        else{
-            return view ('errores.errorpag');
-
-        }
     
-       //return view ('alumno.alumno');
     }
 
     public function fora()
