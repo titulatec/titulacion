@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use DB;
 use Laracasts\Flash\Flash;
+use Excel;
+use Storage;
 
 class AcadControler extends Controller
 {
@@ -38,6 +40,11 @@ class AcadControler extends Controller
     public function proyectos()
     {
         return view('academico.proyectos');  //visualizar proyectos
+    }
+
+    public function profesores()
+    {
+        return view('academico.profesores');  //visualizar proyectos
     }
 
 

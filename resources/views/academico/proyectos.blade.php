@@ -16,7 +16,7 @@
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profesores <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a href="#">Lista de Profesores</a></li>
+                          <li><a href="{{ action('AcadControler@proyectos')}}">Lista de Profesores</a></li>
                         </ul>
                       </li>
                     </ul>
