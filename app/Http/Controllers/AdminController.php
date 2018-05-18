@@ -16,36 +16,23 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        //$tipo = Auth::user()->rol;
+        $this->middleware('is_admin');
 
     }
 
-    public function verificar_rol()
-    {
-        $tipo = Auth::user()->rol;
-        if ($tipo=='admin'){
-        return True;
-        }
-        else{
-            return False;
-
-        }
-    }
-    ///
-
-    /*public function index(){
+    
+    public function index(){
  
- 	 $tipo = Auth::user()->rol;
+ 	 /*$tipo = Auth::user()->rol;
         if ($tipo=='admin'){
             return view ('admin.home');
         }
         else{
             return view ('errores.errorpag');
-        }
-	}*/
-    public function index(){
+        }*/
         return view ('admin.home');
-    }
+	}
+   
 
     public function agregar_personal(Request $data){
 

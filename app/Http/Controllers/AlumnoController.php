@@ -19,25 +19,13 @@ class AlumnoController extends Controller
 	public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('is_alum');
     }
 
     public function index(){
- 
- 	 $tipo = Auth::user()->rol;
-        //$tipo='alumno';
-        if ($tipo=='alum'){
-
-        //$productoT = producto2010::all();
-        //return view('alumno',compact('productoT'));
         $productos = Producto::all();
         return view ('alumno.alumno',compact('productos'));
-        }
-        else{
-            return view ('errores.errorpag');
-
-        }
-	
-       //return view ('alumno.alumno');
+        
 	}
 
 	public function veralumnos (){
