@@ -28,6 +28,5 @@ class divisionController extends Controller
         return view('divestudios.fora');
     }
 
-
 }
 
