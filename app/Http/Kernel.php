@@ -59,6 +59,6 @@ class Kernel extends HttpKernel
         'is_admin' => \App\Http\Middleware\IsAdmin::class,
         'is_alum' => \App\Http\Middleware\IsAlum::class,
         'is_division' => \App\Http\Middleware\IsDivision::class,
-        'is_jefe' => \App\Http\Middleware\IsAcademico::class,
+        'is_jefe' => \App\Http\Middleware\IsAcademico::class, // se agrega para el middleware
     ];
 }

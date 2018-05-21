@@ -17,11 +17,11 @@ class AcadControler extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('is_jefe');
+        $this->middleware('is_jefe');  // var para control middleware
     }
 
     public function index(){
-        return view ('academico.deptoacad');
+        return view ('academico.deptoacad');  //solo regresa la vista del depto
     }
 
     public function proyectos()
