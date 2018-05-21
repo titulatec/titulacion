@@ -2,10 +2,8 @@
 
 @section('content')
 
-<div class="container">
 
-            <nav class="navbar navbar-default">
-                  <div class="navbar-header">
+            <nav class="navbar navbar-inverse ">
                     <div class="inner">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     </button>
@@ -18,13 +16,12 @@
                         <ul class="dropdown-menu">
                           
                           <li><a href="{{ action('AcadControler@proyectos')}}">Ver Proyectos</a></li>
+                          <li><a href="#">Agregar Asesores</a></li>
                         </ul>
                       </li>
                     </ul>
                   </div>
-                  </div>
             </nav>
-</div>
 
 
 <div class="container centrado-porcentual">
@@ -61,7 +58,22 @@
             </tr>
           </tbody>
         </table>
-      </div>  
+      </div>
+
+      <div class="col-md-7">
+      <div class="container col-md-4 col-md-offset-4">
+      
+             <div class="panel-body">
+                    {{ csrf_field() }}
+                    {!! Form::open( array ('url'=> 'nuevabusqueda', 'method'=> 'POST'))!!}
+                        {!! Field::text('buscar' , ['label'=>'Asesor'] )!!}
+                       
+                        {!! Form::submit('Buscar', ['class' => 'btn btn-success']) !!}
+                    {!! Form::close() !!}
+                    
+              </div>
+      </div>
+      </div>   
 
   </div>
 </div>

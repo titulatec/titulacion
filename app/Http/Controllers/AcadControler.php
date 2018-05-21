@@ -17,24 +17,11 @@ class AcadControler extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('is_jefe');
     }
 
     public function index(){
- 
-     $tipo = Auth::user()->rol;
-        //$tipo='alumno';
-        if ($tipo=='jefe'){
-
-        //$productoT = producto2010::all();
-        //return view('alumno',compact('productoT'));
-
         return view ('academico.deptoacad');
-        }
-        else{
-            return view ('errores.errorpag');
-
-        }
-    
     }
 
     public function proyectos()
@@ -60,7 +47,16 @@ class AcadControler extends Controller
         Flash::success("Se ha registrado ".$data['name']." de forma exitosa");
         return back();
     }
-    */
+
+*/
+    public function buscar_asesores()
+    {
+        Asesor::get([
+			'nombreProf' => $data['nombreProf']
+        ]);
+    }
+    
+
 
 
 
