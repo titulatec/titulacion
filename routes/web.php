@@ -52,7 +52,7 @@ Route::get('/div_estudios/div_create', 'divisionController@div_create');
 Route::get('/alumno', 'AlumnoController@index');
 Route::get('/admin', 'AdminController@index');
 Route::get('/alumno/veralumnos', 'AlumnoController@veralumnos')->name('veralumnos');
-Route::post('/alum_registro', 'AdminController@agregar_personal');
+Route::post('/admin_registro', 'AdminController@agregar_personal');
 Route::post('/cargar_datos_usuarios', 'AdminController@cargar_datos_usuarios');
 Route::post('/registrar_proyecto', 'AlumnoController@registrar_proyecto');
 
