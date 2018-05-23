@@ -2,10 +2,8 @@
 
 @section('content')
 
-<div class="panel panel-primary">
 
-            <nav class="navbar navbar-default">
-                  <div class="navbar-header">
+            <nav class="navbar navbar-inverse ">
                     <div class="inner">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     </button>
@@ -16,14 +14,14 @@
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profesores <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a href="{{ action('AcadControler@proyectos')}}">Lista de Profesores</a></li>
+                          <li><a href="{{ action('AcadControler@profesores')}}">Lista de Profesores</a></li>
+
+                          <li><a href="#">Agregar Asesores</a></li>
                         </ul>
                       </li>
                     </ul>
                   </div>
-                  </div>
             </nav>
-</div>
 
 
 

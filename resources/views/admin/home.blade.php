@@ -11,7 +11,7 @@
                 @include('flash::message')
                 <div class="panel-body">
                     {{ csrf_field() }}
-                    {!! Form::open( array ('url'=> 'registro', 'method'=> 'POST'))!!}
+                    {!! Form::open( array ('url'=> 'admin_registro', 'method'=> 'POST'))!!}
                         {!! Field::text('name' , ['label'=>'Nombre'] )!!}
                         {!! Field::email('email' , ['label'=>'E-Mail'] )!!}
                         {!! Field::text('rol' , ['label'=>'Rol'] )!!}

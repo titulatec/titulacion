@@ -7,16 +7,16 @@
                     <div class="inner">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     </button>
-                    <a class="navbar-brand" href="#">Departamento Académico</a>
+                    <a class="navbar-brand" href="#">Servicios escolares</a>
                   </div>
                   <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                       <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proyectos <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">complementarios <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           
-                          <li><a href="{{ action('AcadControler@proyectos')}}">Ver Proyectos</a></li>
-                          <li><a href="#">Agregar Asesores</a></li>
+                          <li><a href="{{ action('AcadControler@complementarios')}}">Ver creditos complementarios</a></li>
+                          <li><a href="#">solicitar archivo creditos complementarios</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -29,7 +29,7 @@
 
 
     <div class="page-heading">
-            <h1>Profesores</h1>
+            <h1>creditos</h1>
     </div>
 
   <div class="row">
@@ -37,24 +37,26 @@
         <table class="table">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>RFC</th>
-              <th>Nombre Profesor</th>
-              <th>Tipo</th>
-              <th>Clave Departamento</th>
-              <th>Producto</th>
-              <th>No de control</th>
+              <th>Numero de control</th>
+              <th>Cred_cultural</th>
+              <th>Cred_deportipo</th>
+              <th>Tutorias</th>
+              <th>Congreso</th>
+              <th>Otro</th>
+              <th>Leng_extranjera</th>
+              <th>Serv_social</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>CUCE12354f</td>
-              <td>Elsa Cuevas</td>
-              <td>A</td>
-              <td>ISC</td>
-              <td>Proyecto</td>
-              <td>14590544</td>
+              <td>15590083</td>
+              <td>1 Credito cultural</td>
+              <td>1 Credito deportivo</td>
+              <td>2 Tutorias</td>
+              <td>1 Congreso</td>
+              <td>1 Ciencias basicas</td>
+              <td> Acreditacion lengua extranjera</td>
+              <td> Acreditacion seervicio social</td>
             </tr>
           </tbody>
         </table>

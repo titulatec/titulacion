@@ -28,5 +28,9 @@ class divisionController extends Controller
         return view('divestudios.fora');
     }
 
+    public function div_create()
+    {
+        return view('divestudios.div_create');
+    }
 }
 
