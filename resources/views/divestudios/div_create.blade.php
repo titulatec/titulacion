@@ -80,9 +80,12 @@
   	</div>
   	</div>
 
-  {{ Form::button('Crear usuario', array('type' => 'submit', 'class' => 'btn btn-primary')) }}    
+  {{ Form::button('Crear usuario', array('type' => 'submit', 'class' => 'btn btn-primary')) }} 
+   
   
 {{ Form::close() }}
 
-
+<div class="row">
+  <<div class="form-group col-md-6">
+  <a href="{{ action('divisionController@fora')}}"><button class="btn btn-suc">REGRESAR</button></a></h3></div>
 @endsection

@@ -4,7 +4,7 @@
 
 <div class="row">
 	<div clss="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3><h3>LLista de Alumnos-Foraneos <a href="{{ action('divisionController@div_create')}}"><button class="btn bnt-succes">Alta Foraneos</button></a></h3>
+		<h3><h3>LLista de Alumnos-Foraneos <a href="{{ action('divisionController@div_create')}}"><button class="btn bnt-primary">Alta Foraneos</button></a></h3>
 
 	</div>
 </div>
