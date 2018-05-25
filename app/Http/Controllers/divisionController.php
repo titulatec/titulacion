@@ -32,5 +32,8 @@ class divisionController extends Controller
     {
         return view('divestudios.div_create');
     }
-}
+
+
+    }
+
 
