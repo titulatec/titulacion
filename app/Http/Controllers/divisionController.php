@@ -33,6 +33,18 @@ class divisionController extends Controller
         return view('divestudios.div_create');
     }
 
+   /* public function agregar_foraneo (Request $data){
+        Proyecto::create([
+            'no_control' => $data[''],
+            'nombre_proyecto' => $data['id'],
+            'password' => bcrypt($data['password']),
+            'rol'=>$data['rol']
+        ]);
+
+        Flash::success("Se ha registrado ".$data['name']." de forma exitosa");
+        return back();
+                                                                                                                                                                                                 
+    }*/
 
     }
 
