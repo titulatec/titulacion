@@ -20,24 +20,35 @@
                  @include('flash::message')
                 <div class="panel-body">
                     {{ csrf_field() }}
-                    {!! Form::open( array ('url'=> 'registrar_proyecto', 'method'=> 'POST'))!!}
-                        {!! Field::text('name' , ['label'=>'Nombre del Proyecto'] )!!}
+                    
+                    <fieldset enabled>
+                    {!! Form::open( array ('url'=> 'registrar_proyecto', 'method'=> 'POST', 'class'=>'form-inline'))!!}
                         
-                       <h5>Producto</h5>
-            <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        {!! Field::text('nocontrol' , '14590571',['label'=>'No. Control'] )!!}
+                        {!! Field::text('nombre' , 'Jose Jaime Rodriguez Pedraza', ['label'=>'Nombre'] )!!}
+                        {!! Field::text('carrera' , 'Ing Sistemas', ['label'=>'Carrera'] )!!}
+
+                        <h5>Producto</h5>
+                        <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                    Seleccione una opción
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    @foreach($productos as $category)
-                    <li><a href="{{$category->id}}">{{$category->producto}}</a></li>
-                    @endforeach
-                </ul>
-            </div>
+                        Seleccione una opción
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            @foreach($productos as $category)
+                            <li><a href="{{$category->id}}">{{$category->producto}}</a></li>
+                            @endforeach
+                        </ul>
+                        </div>
+                        {!! Field::text('nombre_proyecto' , ['label'=>'Nombre del Proyecto'] )!!}
+                        {!! Field::text('asesor' , ['label'=>'Asesor'] )!!}
+                        {!! Field::text('revisor1' , ['label'=>'Revisor 1'] )!!}
+                        {!! Field::text('revisor2' , ['label'=>'Revisor 2'] )!!}
+                        
                         {!! Form::submit('Registrar Proyecto', ['class' => 'btn btn-success']) !!}
                     {!! Form::close() !!}
+                </fieldset>
             </div>
         </div>
     </div>

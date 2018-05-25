@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Solicitud;
+use App\Alumno;
+use Laracasts\Flash\Flash;
 
 class divisionController extends Controller
 {
@@ -33,18 +36,18 @@ class divisionController extends Controller
         return view('divestudios.div_create');
     }
 
-   /* public function agregar_foraneo (Request $data){
-        Proyecto::create([
-            'no_control' => $data[''],
-            'nombre_proyecto' => $data['id'],
-            'password' => bcrypt($data['password']),
-            'rol'=>$data['rol']
+   public function agregar_foraneo (Request $data){
+        Alumno::create([
+            'no_control' => $data['full_nc'],
+            'nombre' => $data['full_name'],
+            'registrado' => 'N';
+            
         ]);
 
         Flash::success("Se ha registrado ".$data['name']." de forma exitosa");
         return back();
                                                                                                                                                                                                  
-    }*/
+    }
 
     }
 

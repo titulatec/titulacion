@@ -17,7 +17,7 @@
                 <div class="panel-heading">Inicio de Sesión</div>
                 @include('flash::message')
                 <div class="panel-body">
-                    
+
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -76,6 +76,7 @@
                     {!! Form::open( array ('url'=> '/', 'method'=> 'GET'))!!}
                     {!! Form::submit('Regresar', ['class' => 'btn btn-danger pull-right']) !!}
                     {!! Form::close() !!}
+                    
                 </div>
             </div>
         </div>

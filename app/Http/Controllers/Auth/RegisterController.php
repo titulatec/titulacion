@@ -65,7 +65,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {   
-        $mensaje1="Se ha registrado con éxito otra";
+        $mensaje1="Se ha registrado con éxito ";
         $mensaje2="No se ha podido completar tu registro, por favor dirigete al departamento de division de estudios";
 
        // $alumno = DB::table('alumnos')->where('no_control', $data['no_control'])->get()->first();
