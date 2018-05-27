@@ -59,6 +59,7 @@
   </div>
   <div class="row">
     <div class="container form-group col-md-6">
+    {{ Form::label('full_optitulacion', 'Plan de Estudios') }}
       {{ Form::label('full_optitulacion', 'Opcion de Titulacion') }}
     <select name="role" id="role" class="form-control">
       <option>Integral</option>
@@ -74,7 +75,7 @@
   </div>
   <div class="row">
   <<div class="form-group col-md-6">
-      {{ Form::label('full_name', 'Tipo') }}
+      {{ Form::label('full_tipo', 'Tipo') }}
     <select name="role" id="role" class="form-control">
       <option>I</option>
     	</select>

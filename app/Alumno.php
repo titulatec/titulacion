@@ -8,7 +8,7 @@ class Alumno extends Model
 {
     //
 	protected $fillable = [
-        'no_control', 'nombre',
+        'no_control', 'nombre', 'apellido_p', 'apellido_m', 'carrera', 'telefono', 'mail',
    ];
 
 }
