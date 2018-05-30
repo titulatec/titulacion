@@ -77,7 +77,7 @@
   <<div class="form-group col-md-6">
       {{ Form::label('full_tipo', 'Tipo') }}
     <select name="role" id="role" class="form-control">
-      <option>F</option>
+      <option>I</option>
     	</select>
   	</div>
   	</div>

@@ -58,6 +58,11 @@ class divisionController extends Controller
                                                                                                                                                                                                  
     }
 
+    public function div_interno()
+    {
+        return view('divestudios.div_interno');
+    }
+
     }
 
 

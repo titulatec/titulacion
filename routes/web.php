@@ -35,6 +35,7 @@ Route::get('/div_estudios', 'divisionController@index');
 Route::post('/registro', 'divisionController@agregar_foraneo');
 Route::get('/div_estudios/fora', 'divisionController@fora');
 Route::get('/div_estudios/div_create', 'divisionController@div_create');
+Route::get('/div_estudios/div_interno', 'divisionController@div_interno');
 //===========================================================================
 
 //Bloque para Eric ==========================================================

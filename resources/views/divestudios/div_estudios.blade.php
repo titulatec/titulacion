@@ -23,9 +23,9 @@
 			aria-haspopup="true" aria-expanded="false">MENU <span class="caret"></span></a>
 			<ul class="dropdown-menu">
 				<li><a href="{{ action('divisionController@index')}}">Solicutudes</a></li>
-				<li><<a href="#">Residencias</a></li>
-				</li>
+				<li><<a href="#">Residencias</a></li></li>
 				<li><<a href="{{ action('divisionController@fora')}}">Solictud Foraneos</a></li>
+                <li><<a href="{{ action('divisionController@div_interno')}}">Solictud Internos</a></li>
 			</ul>
 		</li>
 	</ul>
