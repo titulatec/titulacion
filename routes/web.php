@@ -24,6 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/deptoacad', 'AcadControler@index');
 Route::get('/proyectos', 'AcadControler@proyectos');
 Route::get('/profesores', 'AcadControler@profesores');
+Route::get('/deptoacad/residencias', 'AcadControler@residencias');
+Route::post('/residencias_registro', 'AcadControler@reg_residencia');
 Route::post('/nuevoreg', 'AcadControler@agregar_asesores');
 Route::get('/asesor', 'AsesorController@index');
 

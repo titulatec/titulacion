@@ -15,7 +15,6 @@
                         <ul class="dropdown-menu">
                           
                           <li><a href="{{ action('AcadControler@proyectos')}}">Ver Proyectos</a></li>
-                          <li><a href="{{ action('AcadControler@residencias')}}">Residencias</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -30,4 +29,38 @@
                     </ul>
                   </div>
             </nav>
+
+<!------------------------.. -->
+
+<div class="container centrado-porcentual">
+    <div class="row">
+        <div class="container col-md-4 col-md-offset-4">
+            <div class="panel panel-primary">
+
+                <div class="panel-heading">Registrar Residencias</div>
+                @include('flash::message')
+                <div class="panel-body">
+                    {{ csrf_field() }}
+                    {!! Form::open( array ('url'=> 'residencias_registro', 'method'=> 'POST'))!!}
+                        {!! Field::text('no_control' , ['label'=>'Número de control'] )!!}
+                        {!! Field::text('nombre_proyecto' , ['label'=>'Nombre del Proyecto'] )!!}
+                        {!! Field::text('asesor' , ['label'=>'Asesor'] )!!}
+                        {!! Field::text('revisor1' , ['label'=>'Revisor 1'] )!!}
+                        {!! Field::text('arevisor2' , ['label'=>'Revisor 2'] )!!}
+                        {!! Field::text('optitulacion' , ['label'=>'Opción de Titulación'] )!!}
+                        {!! Field::text('Producto' , ['label'=>'Producto'] )!!}
+                        {!! Field::text('status' , ['label'=>'Estado'] )!!}
+                       
+                        {!! Form::submit('Registrar', ['class' => 'btn btn-success']) !!}
+                    {!! Form::close() !!}
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
 @endsection

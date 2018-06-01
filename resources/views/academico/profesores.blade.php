@@ -16,6 +16,7 @@
                         <ul class="dropdown-menu">
                           
                           <li><a href="{{ action('AcadControler@proyectos')}}">Ver Proyectos</a></li>
+                           <li><a href="{{ action('AcadControler@reg_residencia')}}">Residencias</a></li>
                           <li><a href="#">Agregar Asesores</a></li>
                         </ul>
                       </li>

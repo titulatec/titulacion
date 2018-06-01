@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use DB;
+use App\Proyecto;
 use Laracasts\Flash\Flash;
 use Excel;
 use Storage;
@@ -27,6 +28,29 @@ class AcadControler extends Controller
     public function proyectos()
     {
         return view('academico.proyectos');  //visualizar proyectos
+    }
+
+    public function residencias()
+    {
+        return view('academico.residencias');  //visualizar residencias
+    }
+
+    public function reg_residencia (Request $data){
+        Proyecto::create([
+            'no_control' => $data['full_nc'],
+            'nombre_proyecto' => $data['full_nombreproyecto'],
+            'asesor' => $data['full_asesor'],
+            'revisor1' => $data['full_revisor1'],
+            'revisor2' => $data['full_revisor2'],
+            'optitulacion' => $data['full_optitulacion'],
+            'producto' => $data['full_producto'],
+            'status' => $data['full_status']
+
+        ]);
+
+        Flash::success("Se ha registrado ".$data['nombre_proyecto']." de forma exitosa");
+        return back();
+                                                                                                                                                                                                 
     }
 
     public function profesores()

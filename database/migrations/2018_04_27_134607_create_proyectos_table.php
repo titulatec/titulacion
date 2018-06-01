@@ -20,8 +20,9 @@ class CreateProyectosTable extends Migration
             $table->string('asesor')->nullable();
             $table->string('revisor1')->nullable();
             $table->string('revisor2')->nullable();
+            $table->string('optitulacion');
             $table->string('producto');
-            $table->string('carrera')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }
