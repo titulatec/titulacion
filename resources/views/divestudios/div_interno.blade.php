@@ -7,7 +7,7 @@
     <div class="row">
         <div class="container col-md-7 col-md-offset-3">
             <div class="panel panel-primary">
-                <div class="panel-heading">Registro Foraneo</div>
+                <div class="panel-heading">Registro Internos</div>
                 @include('flash::message')
 
  {{ Form::open(array('url' => 'registro', 'method' => 'POST'), array('role' => 'form')) }}
