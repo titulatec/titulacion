@@ -42,14 +42,14 @@ class divisionController extends Controller
             'nombre' => $data['full_name'],
             'apellido_p' => $data['full_apellido_p'],
             'apellido_m' => $data['full_apellido_m'],
-            'carrera' => $data['full_carrera'],
+            'carrera' => $data['carrera'],
             'telefono' => $data['full_tel'],
             'mail' => $data['full_email'],
             'plan_estud' => $data['full_planest'],
-            'optitulacion' => $data['full_optitulacion'],
+            'opcion_titulacion' => $data['opcion'],
             'producto' => $data['full_producto'],
-            'tipo' => $data['full_tipo'],
-            'status' => $data['full_email'],
+            'tipo' => 'Foraneo'
+            //'status' => $,
             'registrado' => 'N',
 
         ]);

@@ -35,12 +35,7 @@
   <div class="row">
     <div class="container form-group col-md-6">
       {{ Form::label('full_carrera', 'Carrera') }}
-      <select name="role" id="role" class="form-control">
-        <option>ISC</option>
-        <option>TIC'S</option>
-        <option>IGE</option>
-        <option>INDUSTRIAL</option>
-      </select>
+      {{ Form::select('carrera', ['Electronica' =>'Electronica', 'Gestión Empresarial' =>'Gestión Empresarial', 'Industrial' =>'Industrial', 'Sistemas Computacionales' =>'Sistemas Computacionales', 'Tecnologías de la Información y Comunicación' =>'Tecnologías de la Información y Comunicación' ], null, ['class' => 'form-control']) }}
     </div>
     <div class="container form-group col-md-6">
       {{ Form::label('full_tel', 'Telefono') }}
@@ -61,25 +56,13 @@
     <div class="container form-group col-md-6">
     {{ Form::label('full_optitulacion', 'Plan de Estudios') }}
       {{ Form::label('full_optitulacion', 'Opcion de Titulacion') }}
-    <select name="role" id="role" class="form-control">
-      <option>Integral</option>
-      <option>Examen</option>
-      <option>Tesis</option>
-      <option>Otros</option>
-      </select>
+      {{ Form::select('opcion', ['Integral' =>'Integral', 'Examen' =>'Examen', 'Tesis' =>'Tesis', 'Residencias' =>'Residencias', 'Otros' =>'Otros' ], null, ['class' => 'form-control']) }}
     </div>
     <div class="container form-group col-md-6">
       {{ Form::label('full_producto', 'Producto') }}
       {{ Form::text('full_producto', null, array('placeholder' => 'Introduce el producto', 'class' => 'form-control')) }}        
     </div>
   </div>
-  <div class="row">
-  <<div class="form-group col-md-6">
-      {{ Form::label('full_tipo', 'Tipo') }}
-    <select name="role" id="role" class="form-control">
-      <option>F</option>
-    	</select>
-  	</div>
   	</div>
 
   {{ Form::button('Crear usuario', array('type' => 'submit', 'class' => 'btn btn-primary')) }} 
