@@ -45,6 +45,7 @@ class divisionController extends Controller
             'carrera' => $data['full_carrera'],
             'telefono' => $data['full_tel'],
             'mail' => $data['full_email'],
+            'plan_estud' => $data['full_planest'],
             'optitulacion' => $data['full_optitulacion'],
             'producto' => $data['full_producto'],
             'tipo' => $data['full_tipo'],

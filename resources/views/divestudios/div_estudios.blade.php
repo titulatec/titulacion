@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <nav class="navhar navbar-default">
     <div class="container">
 
