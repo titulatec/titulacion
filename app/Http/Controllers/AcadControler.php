@@ -43,11 +43,6 @@ class AcadControler extends Controller
                                                                                                                                                                                                  
     }
 
-    public function profesores()
-    {
-        return view('academico.profesores');  //visualizar proyectos
-    }
-
 
    /* public function agregar_asesores()
     {
