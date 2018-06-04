@@ -32,7 +32,7 @@ class AcadControler extends Controller
             'asesor' => $data['full_asesor'],
             'revisor1' => $data['full_revisor1'],
             'revisor2' => $data['full_revisor2'],
-            'optitulacion' => $data['full_optitulacion'],
+            'optitulacion' => $data['optitulacion'],
             'producto' => $data['full_producto'],
             'status' => $data['full_status']
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Database\QueryException;
+use Illuminate\Database\QueryException;  //para excepción del catch (en el flash)
 use App\User;
 use App\Alumno;
 use DB;

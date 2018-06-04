@@ -77,7 +77,7 @@
               @include('flash::message')
              <div class="panel-body">
                     {{ csrf_field() }}
-                    {!! Form::open( array ('url'=> 'nuevoreg', 'method'=> 'POST'))!!}
+                    {!! Form::open( array ('url'=> 'AcadControler@reg_residencia', 'method'=> 'POST'))!!}
                         {!! Field::text('asesor' , ['label'=>'Asesor'] )!!}
                         {!! Field::text('rev1' , ['label'=>'Revisor 1'] )!!}
                         {!! Field::text('rev2' , ['label'=>'Revisor 2'] )!!}
@@ -110,7 +110,7 @@
                         {!! Field::text('nombre_proyecto' , ['label'=>'Nombre del Proyecto'] )!!}
                         {!! Field::text('asesor' , ['label'=>'Asesor'] )!!}
                         {!! Field::text('revisor1' , ['label'=>'Revisor 1'] )!!}
-                        {!! Field::text('arevisor2' , ['label'=>'Revisor 2'] )!!}
+                        {!! Field::text('revisor2' , ['label'=>'Revisor 2'] )!!}
                         {!! Field::text('optitulacion' , ['label'=>'Opción de Titulación'] )!!}
                         {!! Field::text('Producto' , ['label'=>'Producto'] )!!}
                         {!! Field::text('status' , ['label'=>'Estado'] )!!}

@@ -17,9 +17,13 @@ class CreateSolicitudsTable extends Migration
         Schema::create('solicituds', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('no_control')->unique();
+            $table->string('nombre_proyecto')->nullable();
+            $table->string('asesor')->nullable();
+            $table->string('revisor1')->nullable();
+            $table->string('revisor2')->nullable();
             $table->string('optitulacion');
             $table->string('producto'); 
-            $table->string('solicitud');
+            $table->string('solicitud')->nullable();
             $table->string('tipo');
             $table->string('status');
             $table->timestamps();
