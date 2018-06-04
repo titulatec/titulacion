@@ -22,7 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Bloque para Alma ============================================================
 Route::get('/deptoacad', 'AcadControler@index');
-Route::get('/profesores', 'AcadControler@profesores');
 Route::post('/residencias_registro', 'AcadControler@reg_residencia');
 Route::post('/nuevoreg', 'AcadControler@agregar_asesores');
 Route::get('/asesor', 'AsesorController@index');
