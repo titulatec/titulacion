@@ -25,16 +25,6 @@ class AcadControler extends Controller
         return view ('academico.deptoacad');  //solo regresa la vista del depto
     }
 
-    public function proyectos()
-    {
-        return view('academico.proyectos');  //visualizar proyectos
-    }
-
-    public function residencias()
-    {
-        return view('academico.residencias');  //visualizar residencias
-    }
-
     public function reg_residencia (Request $data){
         Proyecto::create([
             'no_control' => $data['full_nc'],
