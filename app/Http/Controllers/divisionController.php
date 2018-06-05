@@ -38,7 +38,7 @@ class divisionController extends Controller
     }
 
    public function agregar_foraneo (Request $data){
-    try {
+        try {
         Alumno::create([
             'no_control' => $data['full_nc'],
             'nombre' => $data['full_name'],
@@ -56,8 +56,8 @@ class divisionController extends Controller
 
         ]);
 
-        Solicitud::create([
-            'no_control' => $data['full_nc'],
+        //Solicitud::create([
+          //  'no_control' => $data['full_nc'],
             //'nombre' => $data['full_name'],
             //'apellido_p' => $data['full_apellido_p'],
             //'apellido_m' => $data['full_apellido_m'],
@@ -71,10 +71,10 @@ class divisionController extends Controller
             //'status' => $,
             //'registrado' => 'N',
 
-        ]);
+       // ]);
 
         Flash::success("Se ha registrado ".$data['name']." de forma exitosa");
-        return back();
+
 
     } catch (\Illuminate\Database\QueryException $e) {
                 

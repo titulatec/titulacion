@@ -23,7 +23,7 @@ class CreateSolicitudsTable extends Migration
             $table->string('revisor2')->nullable();
             $table->string('optitulacion');
             $table->string('producto'); 
-            $table->string('solicitud')->nullable();
+           // $table->string('solicitud')->nullable();
             $table->string('tipo');
             $table->string('status');
             $table->timestamps();
