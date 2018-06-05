@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\QueryException;
 use App\Solicitud;
 use App\Alumno;
 use Laracasts\Flash\Flash;
@@ -37,6 +38,7 @@ class divisionController extends Controller
     }
 
    public function agregar_foraneo (Request $data){
+    try {
         Alumno::create([
             'no_control' => $data['full_nc'],
             'nombre' => $data['full_name'],
@@ -48,13 +50,37 @@ class divisionController extends Controller
             'plan_estud' => $data['full_planest'],
             'opcion_titulacion' => $data['opcion'],
             'producto' => $data['full_producto'],
-            'tipo' => 'Foraneo'
+            'tipo' => 'Foraneo',
             //'status' => $,
             'registrado' => 'N',
 
         ]);
 
+        Solicitud::create([
+            'no_control' => $data['full_nc'],
+            //'nombre' => $data['full_name'],
+            //'apellido_p' => $data['full_apellido_p'],
+            //'apellido_m' => $data['full_apellido_m'],
+            //'carrera' => $data['carrera'],
+            //'telefono' => $data['full_tel'],
+            //'mail' => $data['full_email'],
+            //'plan_estud' => $data['full_planest'],
+            //'opcion_titulacion' => $data['opcion'],
+            //'producto' => $data['full_producto'],
+            //'tipo' => 'Foraneo',
+            //'status' => $,
+            //'registrado' => 'N',
+
+        ]);
+
         Flash::success("Se ha registrado ".$data['name']." de forma exitosa");
+        return back();
+
+    } catch (\Illuminate\Database\QueryException $e) {
+                
+            Flash::error("Se ha presentado un error con las datos favor de verificarlos ");
+        }
+
         return back();
                                                                                                                                                                                                  
     }

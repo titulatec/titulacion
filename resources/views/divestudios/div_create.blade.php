@@ -63,7 +63,7 @@
       {{ Form::text('full_producto', null, array('placeholder' => 'Introduce el producto', 'class' => 'form-control')) }}        
     </div>
   </div>
-  	</div>
+  
 
   {{ Form::button('Crear usuario', array('type' => 'submit', 'class' => 'btn btn-primary')) }} 
    
