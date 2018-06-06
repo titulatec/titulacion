@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Producto;
 use App\Proyecto;
+use App\Solicitud;
 use App\Http\Controllers\Controller;
 use DB;
 use ConsultasAlumno;
+use Laracasts\Flash\Flash;
 
 class AlumnoController extends Controller
 {	
@@ -50,14 +52,16 @@ class AlumnoController extends Controller
 	}
 
     public function registrar_proyecto (Request $data){
-        Proyecto::create([
-            'no_control' => $data['name'],
-            'nombre_proyecto' => $data['id'],
-            'password' => bcrypt($data['password']),
-            'rol'=>$data['rol']
-        ]);
+        Solicitud::create([
+            'no_control' => $data['nocontrol'],
+            'nombre_proyecto' => $data['nombre_proyecto'],
+            'optitulacion' => $data['opcion'],
+            'producto' => $data['producto'],
+            'tipo' => $data['tipo']
+            
+            ]);
 
-        Flash::success("Se ha registrado ".$data['name']." de forma exitosa");
+        Flash::success("Se ha registrado el proyecto: ".$data['nombre_proyecto']." de forma exitosa");
         return back();
                                                                                                                                                                                                  
     }
