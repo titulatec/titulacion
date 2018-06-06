@@ -30,11 +30,12 @@
                     </ul>
                   </div>
             </nav>
+            
 
 <!------------------------.. -->
 
 <div class="tab-content">
-
+@include('flash::message')
 <!-- -->
 <div id="menu1" class="tab-pane fade">
 
@@ -77,7 +78,7 @@
               @include('flash::message')
              <div class="panel-body">
                     {{ csrf_field() }}
-                    {!! Form::open( array ('url'=> 'AcadControler@reg_residencia', 'method'=> 'POST'))!!}
+                    {!! Form::open( array ('url'=> 'nuevoreg', 'method'=> 'POST'))!!}
                         {!! Field::text('asesor' , ['label'=>'Asesor'] )!!}
                         {!! Field::text('rev1' , ['label'=>'Revisor 1'] )!!}
                         {!! Field::text('rev2' , ['label'=>'Revisor 2'] )!!}
@@ -102,7 +103,7 @@
             <div class="panel panel-primary">
 
                 <div class="panel-heading">Registrar Residencias</div>
-                @include('flash::message')
+                
                 <div class="panel-body">
                     {{ csrf_field() }}
                     {!! Form::open( array ('url'=> 'residencias_registro', 'method'=> 'POST'))!!}
@@ -112,7 +113,7 @@
                         {!! Field::text('revisor1' , ['label'=>'Revisor 1'] )!!}
                         {!! Field::text('revisor2' , ['label'=>'Revisor 2'] )!!}
                         {!! Field::text('optitulacion' , ['label'=>'Opción de Titulación'] )!!}
-                        {!! Field::text('Producto' , ['label'=>'Producto'] )!!}
+                        {!! Field::text('producto' , ['label'=>'Producto'] )!!}
                         {!! Field::text('status' , ['label'=>'Estado'] )!!}
                        
                         {!! Form::submit('Registrar', ['class' => 'btn btn-success']) !!}

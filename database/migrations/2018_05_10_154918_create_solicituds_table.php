@@ -24,9 +24,9 @@ class CreateSolicitudsTable extends Migration
             $table->string('optitulacion');
             $table->string('producto'); 
            // $table->string('solicitud')->nullable();
-            $table->string('tipo');
+            $table->string('tipo')->nullable();
             $table->string('status');
-            $table->string('mensaje');
+            $table->string('mensaje')->nullable();
             $table->timestamps();
         });
     }

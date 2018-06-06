@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Solicitud;
 use DB;
-use App\Proyecto;
 use Laracasts\Flash\Flash;
 use Excel;
 use Storage;
@@ -25,16 +25,18 @@ class AcadControler extends Controller
         return view ('academico.deptoacad');  //solo regresa la vista del depto
     }
 
-    public function reg_residencia (Request $data){
-        Proyecto::create([
-            'no_control' => $data['full_nc'],
-            'nombre_proyecto' => $data['full_nombreproyecto'],
-            'asesor' => $data['full_asesor'],
-            'revisor1' => $data['full_revisor1'],
-            'revisor2' => $data['full_revisor2'],
+    public function reg_residencia(Request $data){
+        Solicitud::create([
+            'no_control' => $data['no_control'],
+            'nombre_proyecto' => $data['nombre_proyecto'],
+            'asesor' => $data['asesor'],
+            'revisor1' => $data['revisor1'],
+            'revisor2' => $data['revisor2'],
             'optitulacion' => $data['optitulacion'],
-            'producto' => $data['full_producto'],
-            'status' => $data['full_status']
+            'producto' => $data['producto'],
+            'tipo'=> null,
+            'status' => $data['status'],
+            'mensaje' => null
 
         ]);
 
