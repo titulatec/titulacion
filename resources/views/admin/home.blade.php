@@ -50,7 +50,8 @@
                         <br>
                         {!! Field::text('telefono' , ['label'=>'Telefono'] )!!}
                         {!! Field::email('email' , ['label'=>'E-Mail'] )!!}
-                        {{ Form::select('tipo', ['Interno', 'Foráneo'], null, ['class' => 'form-control']) }}
+                        {{ Form::label('Tipo') }}<br>
+                        {{ Form::select('tipo', ['Interno' =>'Interno', 'Foraneo' =>'Foraneo'], null, ['class' => 'form-control']) }}
                         <br>
                         {!! Field::text('plan' , ['label'=>'Plan de Estudios'] )!!}
                         
