@@ -26,6 +26,7 @@ class CreateSolicitudsTable extends Migration
            // $table->string('solicitud')->nullable();
             $table->string('tipo');
             $table->string('status');
+            $table->string('mensaje');
             $table->timestamps();
         });
     }

@@ -24,7 +24,12 @@ class AlumnoController extends Controller
 
     public function index(){
         $productos = Producto::all();
-        return view ('alumno.alumno',compact('productos'));
+        
+        $alumno = DB::table('alumnos')->where('mail', Auth::user()->email )->get()->first();
+
+
+        $estado = 'enabled';
+        return view ('alumno.alumno',compact('productos','estado','alumno'));
         
 	}
 
