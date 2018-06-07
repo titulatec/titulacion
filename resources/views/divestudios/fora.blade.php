@@ -5,10 +5,7 @@
 
 <div class="row">
 	<div clss="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		.opacity {
 		<h3><h3>LLista de Alumnos-Foraneos <a href="{{ action('divisionController@div_create')}}"><button class="btn bnt-primary">Alta Foraneos</button></a></h3>
-
-	</div>
 </div>
 
 <div class="container centrado-porcentual">
@@ -31,6 +28,9 @@
 				<th>Plan de Estudios</th>
 				<th>Opcion de Titulacion</th>
 				<th>Producto</th>
+				<th>Asedsor</th>
+				<th>Revisor1</th>
+				<th>Revisor2</th>
 				<th>Tipo</th>
 				<th></th>
 				<th>Opciones</th>

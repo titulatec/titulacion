@@ -30,6 +30,7 @@ class divisionController extends Controller
     public function fora()
     {
         return view('divestudios.fora');
+
     }
 
     public function div_create()
@@ -90,6 +91,14 @@ class divisionController extends Controller
         return view('divestudios.div_interno');
     }
 
+    public function div_edit()
+    {
+        return view('divestudios.div_edit');
     }
 
+
+    }
+
+   
+    
 
