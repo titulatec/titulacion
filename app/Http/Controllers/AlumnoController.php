@@ -25,13 +25,21 @@ class AlumnoController extends Controller
     }
 
     public function index(){
-        $productos = Producto::all();
-        
+       // $productos = Producto::all();
         $alumno = DB::table('alumnos')->where('mail', Auth::user()->email )->get()->first();
+        $solicitud = Solicitud::where ('no_control','=',$alumno->no_control)->get()->first();
+        if ($solicitud!= null){    
+            
+            $estado = 'disabled';
 
-
-        $estado = 'enabled';
-        return view ('alumno.alumno',compact('productos','estado','alumno'));
+            
+        }
+        else{
+            
+            $estado = 'enabled'; 
+            
+        }    
+        return view ('alumno.alumno',compact('estado','alumno','solicitud'));
         
 	}
 
@@ -57,8 +65,9 @@ class AlumnoController extends Controller
             'nombre_proyecto' => $data['nombre_proyecto'],
             'optitulacion' => $data['opcion'],
             'producto' => $data['producto'],
-            'tipo' => $data['tipo']
-            
+            'tipo' => $data['tipo'],
+            'status'=>'Enviado',
+            'mensaje'=>'Revise la plataforma en 5 dias para ver asesor y revisores'
             ]);
 
         Flash::success("Se ha registrado el proyecto: ".$data['nombre_proyecto']." de forma exitosa");

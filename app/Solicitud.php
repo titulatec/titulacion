@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Solicitud extends Model
 {
  	protected $fillable = [
-    'no_control', 'nombre_proyecto', 'asesor', 'revisor1', 'revisor2', 'optitulacion', 'producto','status', 'mensaje'
+    'no_control', 'nombre_proyecto', 'asesor', 'revisor1', 'revisor2', 'optitulacion', 'producto','status', 'mensaje','tipo'
 	];
 }
