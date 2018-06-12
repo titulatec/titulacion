@@ -29,7 +29,9 @@ class divisionController extends Controller
 
     public function fora()
     {
-        return view('divestudios.fora');
+        //return view('divestudios.fora');
+        $foraneo = Alumno::all();
+        return view('divestudios.fora', compact('foraneo'));      
 
     }
 

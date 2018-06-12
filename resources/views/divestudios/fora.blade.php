@@ -33,12 +33,18 @@
 				<th>Revisor2</th>
 				<th>Tipo</th>
 				<th></th>
-				<th>Opciones</th>
-
+				<th>Editar</th>
+				<th>Aprobar</th>
 			</thead>
-
 			
+		</table>
 </div>
+
+<ul>
+    @foreach ($foraneo as $foraneos)
+    <li>{{$foraneos->nombre}}</li>
+
+    @endforeach
 </div>
 
 @endsection
