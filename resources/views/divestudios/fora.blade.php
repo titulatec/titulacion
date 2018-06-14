@@ -38,13 +38,24 @@
 			</thead>
 			
 		</table>
-</div>
 
-<ul>
-    @foreach ($foraneo as $foraneos)
+			@foreach ($foraneo as $foraneos)
     <li>{{$foraneos->nombre}}</li>
 
-    @endforeach
+    <h3><a href="{{ action('divisionController@div_edit')}}"><button class="btn bnt-primary">Edit</button><l class="fa fa-pencil-square-o"></l></a></h3>
+
+     <td>
+		{{ Form::open(array('action' => 'divisionController@fora')) }}
+			<input type="hidden" name="_method"  value="DELETE">
+				<button onclick="return confirm ('Eliminar?')" class="btn bnt-danger">
+					<l class="fa fa-trash-o"></l>	
+				</button>
+		{!! Form::close()!!}
+	</td>
+
+    	@endforeach
+	</div>
+    
 </div>
 
 @endsection
