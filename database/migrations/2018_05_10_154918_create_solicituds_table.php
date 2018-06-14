@@ -25,7 +25,7 @@ class CreateSolicitudsTable extends Migration
             $table->string('producto'); 
            // $table->string('solicitud')->nullable();
             $table->string('tipo')->nullable();
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->string('mensaje')->nullable();
             $table->timestamps();
         });

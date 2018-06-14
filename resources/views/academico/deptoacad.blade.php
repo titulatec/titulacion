@@ -2,6 +2,17 @@
 
 @section('content')
 
+<script type="text/javascript">
+
+function borrar() {
+  tab = document.getElementById('tablita');
+  for (i=tab.getElementsByTagName('input').length-1; i>=0; i--) {
+    chk = tab.getElementsByTagName('input')[i];
+    if (chk.checked)
+      tab.removeChild(chk.parentNode.parentNode);
+  }
+}
+</script>
 
 
             <nav class="navbar navbar-inverse ">
@@ -31,6 +42,22 @@
                   </div>
             </nav>
             
+<!--<div>
+<table>
+<tbody id="tablita">
+<tr>
+<td>aaa</td><td>aaa</td><td><input type="checkbox" /></td>
+<tr>
+<tr>
+<td>bbb</td><td>bbb</td><td><input type="checkbox" /></td>
+<tr>
+<tr>
+<td>ccc</td><td>ccc</td><td><input type="checkbox" /></td>
+<tr>
+</tbody>
+</table>
+<input type="button" value="Borrar" onclick="borrar()" />
+</div> -->
 
 <!------------------------.. -->
 
@@ -46,33 +73,35 @@
     </div>
 
   <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-6">
         <table class="table">
           <thead>
             <tr>
-              <th>id_proyecto</th>
-              <th>NombreProyecto</th>
-              <th>Numero de control</th>
-              <th>ClavePlan</th>
+              <th>Nombre de Proyecto</th>
               <th>Producto</th>
-              <th>Clave Carrera</th>
+              <th>Asesor</th>
+              <th>Revisor</th>
+              <th>Revisor 2</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Titulaciones</td>
-              <td>14590544</td>
-              <td>2010</td>
-              <td>Proyecto</td>
-              <td>ISC</td>
-            </tr>
+            
+              @foreach( $solicitud as $solicituds)
+              <tr>
+                <th>{{$solicituds->nombre_proyecto}}</th>
+                <th>{{$solicituds->producto}}</th>
+                <th>{{$solicituds->asesor}}</th>
+                <th>{{$solicituds->revisor1}}</th>
+                <th>{{$solicituds->revisor2}}</th>
+              </tr>
+              @endforeach
+            
           </tbody>
         </table>
       </div>  
 
-      <div class="col-md-7">
-      <div class="container col-md-4 col-md-offset-4">
+      <div class="col-md-2">
+      <div class="container col-md-12 col-md-offset-12">
         
           
               @include('flash::message')
@@ -113,7 +142,8 @@
                         {!! Field::text('revisor1' , ['label'=>'Revisor 1'] )!!}
                         {!! Field::text('revisor2' , ['label'=>'Revisor 2'] )!!}
                         {!! Field::text('optitulacion' , ['label'=>'Opción de Titulación'] )!!}
-                        {!! Field::text('producto' , ['label'=>'Producto'] )!!}
+                        {{ Form::label('Producto') }}<br>
+                        {{ Form::select('producto', ['Residencias' =>'Residencias', 'Tesis' =>'Tesis', 'Proyecto' =>'Proyecto'], null, ['class' => 'form-control']) }}<br>
                         {!! Field::text('status' , ['label'=>'Estado'] )!!}
                        
                         {!! Form::submit('Registrar', ['class' => 'btn btn-success']) !!}
@@ -138,48 +168,50 @@
             <h1>Profesores</h1>
     </div>
 
-  <div class="row">
-      <div class="col-md-5">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>RFC</th>
-              <th>Nombre Profesor</th>
-              <th>Tipo</th>
-              <th>Clave Departamento</th>
-              <th>Producto</th>
-              <th>No de control</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>CUCE12354f</td>
-              <td>Elsa Cuevas</td>
-              <td>A</td>
-              <td>ISC</td>
-              <td>Proyecto</td>
-              <td>14590544</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="col-md-7">
-      <div class="container col-md-4 col-md-offset-4">
+    <div class="row">
+    <div class="col-md-1">
+      <div class="container col-md-3 col-md-offset-1">
       
              <div class="panel-body">
                     {{ csrf_field() }}
                     {!! Form::open( array ('url'=> 'nuevabusqueda', 'method'=> 'POST'))!!}
-                        {!! Field::text('buscar' , ['label'=>'Asesor'] )!!}
+                        {!! Field::text('buscar' , ['label'=>'Profesor'] )!!}
                        
                         {!! Form::submit('Buscar', ['class' => 'btn btn-success']) !!}
                     {!! Form::close() !!}
                     
               </div>
       </div>
-      </div>   
+    </div>   <br>
+  </div>
+
+  <div class="row">
+      <div class="col-md-7">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>RFC</th>
+              <th>Nombre Profesor</th>
+              <th>Categoría</th>
+              <th>Clave Depto</th>
+            </tr>
+          </thead>
+          <tbody>
+              @foreach( $profesor as $profesors)
+              <tr>
+                <th>{{$profesors->RFC}}</th>
+                <th>{{$profesors->nombre_profe}}</th>
+                <th>{{$profesors->categoria}}</th>
+                <th>{{$profesors->cve_depto}}</th>
+              </tr>
+              @endforeach
+            
+          </tbody>
+        </table>
+        
+      </div>
+
+      
 
   </div>
 </div>
