@@ -127,7 +127,9 @@
                               <strong>{{$solicitud->status}}: </strong> {{$solicitud->mensaje}}
                             </div>
                             @endif
+                            {!! Form::file('images[]', array('multiple' => true)) !!}
                         </div>
+
                     </div>
                 </div>
             </div>
