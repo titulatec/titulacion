@@ -32,7 +32,7 @@ class AlumnoController extends Controller
             
             $estado = 'disabled';
 
-            
+        //    
         }
         else{
             
