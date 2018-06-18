@@ -18,7 +18,8 @@
 		<table class="table table-striped table-borderes table-condensed table-hover">
 
 			<thead>
-				<th>NC</th>
+			<tr>
+				<th>No Control</th>
 				<th>Nombre</th>
 				<th>Apellido Paterno</th>
 				<th>Apellido Materno</th>
@@ -28,23 +29,40 @@
 				<th>Plan de Estudios</th>
 				<th>Opcion de Titulacion</th>
 				<th>Producto</th>
-				<th>Asedsor</th>
+				<th>Asesor</th>
 				<th>Revisor1</th>
 				<th>Revisor2</th>
 				<th>Tipo</th>
 				<th></th>
 				<th>Editar</th>
 				<th>Aprobar</th>
+			</tr>
 			</thead>
-			
-		</table>
-</div>
-
-<ul>
-    @foreach ($foraneo as $foraneos)
-    <li>{{$foraneos->nombre}}</li>
-
-    @endforeach
+			<tbody>
+				@foreach ($foraneo as $foraneos)
+					<tr>
+						<td>{{$foraneos->no_control}}</td>
+						<td>{{$foraneos->nombre}}</td>
+						<td>{{$foraneos->apellido_p}}</td>
+						<td>{{$foraneos->apellido_m}}</td>
+						<td>{{$foraneos->carrera}}</td>
+						<td>{{$foraneos->telefono}}</td>
+						<td>{{$foraneos->mail}}</td>
+						<td>{{$foraneos->plan_estud}}</td>
+						<td>{{$foraneos->opcion_titulacion}}</td>
+						<td>{{$foraneos->producto}}</td>
+						<td>{{$foraneos->tipo}}</td>
+					<td>
+						<a href="{{ action('divisionController@div_edit')}}"><button class="btn bnt-primary">Edit</button>
+							<i class="fa fa-pencil-square-o"></i>
+						</a>
+					</td>
+					</tr>
+    			@endforeach
+    		</tbody>
+    	</table>
+	</div>
+    
 </div>
 
 @endsection
