@@ -16,13 +16,13 @@ class AlmaController extends Controller
         return view('layouts.alma', compact('alumnos'));
     }
 
-    /*public function pdf()
+    public function pdf()
     {        
         
         $alumnos = Alumno::all(); 
 
-        $pdf = PDF::loadView('pdf.alumnos', compact('alumnos'));
+        $pdf = PDF::loadView('layouts.pdf', compact('alumnos'));
 
         return $pdf->download('listado.pdf');
-    }*/
+    }
 }

@@ -18,12 +18,12 @@
             </tr>                            
         </thead>
         <tbody>
-            @foreach($products as $product)
+            @foreach($alumnos as $alumno)
             <tr>
-                <td>{{ $product->no_control }}</td>
-                <td>{{ $product->nombre }}</td>
-                <td>{{ $product->apellido_p }}</td>
-                <td>{{ $product->apellido_m}}</td>
+                <td>{{ $alumno->no_control }}</td>
+                <td>{{ $alumno->nombre }}</td>
+                <td>{{ $alumno->apellido_p }}</td>
+                <td>{{ $alumno->apellido_m}}</td>
             </tr>
             @endforeach
         </tbody>
