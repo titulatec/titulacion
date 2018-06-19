@@ -26,6 +26,6 @@ class jesusController extends Controller
 
         $pdf = PDF::loadView('layouts.pdf', compact('products'));
 
-        return $pdf->download('listado.pdf'); 
+        return $pdf->stream('listado.pdf'); 
     }
 }
