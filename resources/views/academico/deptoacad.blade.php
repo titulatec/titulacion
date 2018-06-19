@@ -43,28 +43,13 @@ function borrar() {
             </nav>
 
 <div>
-<a href="#" class="btn bnt-primary">Asignar asesores
+<a href="" class="btn bnt-primary">Asignar asesores
   <i class="fa fa-pencil-square-o"></i>
 </a>
 
 </div>
             
-<!--<div>
-<table>
-<tbody id="tablita">
-<tr>
-<td>aaa</td><td>aaa</td><td><input type="checkbox" /></td>
-<tr>
-<tr>
-<td>bbb</td><td>bbb</td><td><input type="checkbox" /></td>
-<tr>
-<tr>
-<td>ccc</td><td>ccc</td><td><input type="checkbox" /></td>
-<tr>
-</tbody>
-</table>
-<input type="button" value="Borrar" onclick="borrar()" />
-</div> -->
+
 
 <!------------------------.. -->
 
