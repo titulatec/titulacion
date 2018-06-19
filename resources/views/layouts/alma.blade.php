@@ -14,12 +14,12 @@
             </tr>                            
         </thead>
         <tbody>
-            @foreach($alumnos as $alumno)
+            @foreach($products as $producto)
             <tr>
-                <td>{{ $alumno->no_control }}</td>
-                <td>{{ $alumno->nombre }}</td>
-                <td>{{ $alumno->apellido_p }}</td>
-                <td>{{ $alumno->apellido_m}}</td>
+                <td>{{ $producto->no_control }}</td>
+                <td>{{ $producto->nombre }}</td>
+                <td>{{ $producto->apellido_p }}</td>
+                <td>{{ $producto->apellido_m}}</td>
             </tr>
             @endforeach
         </tbody>

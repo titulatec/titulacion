@@ -11,17 +11,17 @@ class AlmaController extends Controller
 {
     public function index()
     {
-        $alumnos = Alumno::all();
+        $products = Alumno::all();
 
-        return view('layouts.alma', compact('alumnos'));
+        return view('layouts.alma', compact('products'));
     }
 
     public function pdf()
     {        
         
-        $alumnos = Alumno::all(); 
+        $products = Alumno::all(); 
 
-        $pdf = PDF::loadView('layouts.pdf', compact('alumnos'));
+        $pdf = PDF::loadView('layouts.pdf', compact('products'));
 
         return $pdf->download('listado.pdf');
     }
