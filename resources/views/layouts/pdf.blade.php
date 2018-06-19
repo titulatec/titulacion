@@ -1,10 +1,14 @@
-@extends('layouts.app')
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-@section('content')<br><br><br>
-    <div class="container col-md-10 col-md-offset-1">
-    <div class="panel panel-primary">
-                <div class="panel-heading">Listado de alumnos</div>
-    <table class="table table-hover table-striped">
+        <title>Laravel y data en PDF | Rimorsoft Online</title>
+
+    </head>
+    <body>
+        <table class="table table-hover table-striped">
         <thead>
             <tr>
                 <th>No. Control</th>
@@ -24,18 +28,5 @@
             @endforeach
         </tbody>
     </table>
-    <hr>
-    <p>
-        <a href="{{ route('araceli-alumnos.pdf') }}" class="btn btn-sm btn-primary">
-            Descargar productos en PDF
-        </a>
-    </p>
-
-</div>
-
-</div>
-
-
-
-
-@endsection
+    </body>
+</html>
