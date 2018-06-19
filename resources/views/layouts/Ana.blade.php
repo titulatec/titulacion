@@ -14,19 +14,19 @@
             </tr>                            
         </thead>
         <tbody>
-            @foreach($alumnos as $alumno)
+            @foreach($products as $product)
             <tr>
-                <td>{{ $alumno->no_control }}</td>
-                <td>{{ $alumno->nombre }}</td>
-                <td>{{ $alumno->apellido_p }}</td>
-                <td>{{ $alumno->apellido_m}}</td>
+                <td>{{ $product->no_control }}</td>
+                <td>{{ $product->nombre }}</td>
+                <td>{{ $product->apellido_p }}</td>
+                <td>{{ $product->apellido_m}}</td>
             </tr>
             @endforeach
         </tbody>
     </table>
     <hr>
     <p>
-        <a href="{{ route('alma-alumnos.pdf') }}" class="btn btn-sm btn-primary">
+        <a href="{{ route('ana-alumnos.pdf') }}" class="btn btn-sm btn-primary">
             Descargar productos en PDF
         </a>
     </p>

@@ -78,8 +78,13 @@ Route::get('/ana', 'AnaController@index')->name('ana-alumnos');
 Route::get('ana-descargar-alumnos', 'AnaController@pdf')->name('ana-alumnos.pdf');
 
 
+<<<<<<< HEAD
 Route::get('/mariela', 'MarielaController@index')->name('mariela-alumnos');
 Route::get('mariela-descargar-alumnos', 'MarielaController@pdf')->name('mariela-alumnos.pdf');
+=======
+//Route::get('/mariela', 'MarielaController@index')->name('mariela-alumnos');
+//Route::get('mariela-descargar-alumnos', 'MarielaController@pdf')->name('mariela-alumnos.pdf');
+>>>>>>> 42408a28162036342a591cdc6cbcd20dfa73b30a
 
 Route::get('/araceli', 'AraceliController@index')->name('araceli-alumnos');
 Route::get('araceli-descargar-alumnos', 'AraceliController@pdf')->name('araceli-alumnos.pdf');
