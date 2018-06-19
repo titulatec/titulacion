@@ -22,10 +22,10 @@ class AraceliController extends Controller
          * toma en cuenta que para ver los mismos 
          * datos debemos hacer la misma consulta
         **/
-       // $products = Alumno::all(); 
+        $products = Alumno::all(); 
 
-        //$pdf = PDF::loadView('pdf.products', compact('products'));
+        $pdf = PDF::loadView('layouts.pdf', compact('products'));
 
-        //return $pdf->download('listado.pdf');
+        return $pdf->download('alumnos.pdf');
     }
 }

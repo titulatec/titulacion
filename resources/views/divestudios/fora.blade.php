@@ -2,20 +2,18 @@
 
 @section('content')
 
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
+		<a href="{{ action('divisionController@div_create')}}"><button class="btn btn-success">Alta Foraneos</button></a>
+	
+	<br><br>
+    
+    <div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
+    <div class="panel panel-primary">
+                <div class="panel-heading">LISTA DE ALUMNOS</div>
+    <table class="table table-hover table-striped">
 
-<div class="row">
-	<div clss="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>LLista de Alumnos-Foraneos <a href="{{ action('divisionController@div_create')}}"><button class="btn btn-primary">Alta Foraneos</button></a></h3>
 </div>
-
-<div class="container centrado-porcentual">
-  <div class="panel panel-primary">
-
-
-<div class="row">
-	<div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
-		<div class="table-responsive">
-		<table class="table table-striped table-borderes table-condensed table-hover">
 
 			<thead>
 			<tr>
@@ -32,7 +30,7 @@
 				<th>Tipo</th>
 				<th>Asesor</th>
 				<th>Revisor1</th>
-				<th>Revisor2</th>
+				<th>Revisor2</th<
 			</tr>
 			</thead>
 			<tbody>

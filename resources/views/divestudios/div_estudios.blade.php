@@ -23,7 +23,7 @@
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
 			aria-haspopup="true" aria-expanded="false">MENU <span class="caret"></span></a>
 			<ul class="dropdown-menu">
-				<li><<a href="{{ action('divisionController@fora')}}">Solictud Foraneos</a></li>
+				<li><<a href="{{ action('divisionController@fora')}}">Solictudes</a></li>
 				<li><<a href="#">Residencias</a></li></li>
 			</ul>
 		</li>
