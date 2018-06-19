@@ -29,6 +29,8 @@ class CreateSolicitudsTable extends Migration
             $table->string('mensaje')->nullable();
             $table->timestamps();
         });
+
+        
     }
 
     /**
