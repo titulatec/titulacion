@@ -41,6 +41,13 @@ function borrar() {
                     </ul>
                   </div>
             </nav>
+
+<div>
+<a href="#" class="btn bnt-primary">Asignar asesores
+  <i class="fa fa-pencil-square-o"></i>
+</a>
+
+</div>
             
 <!--<div>
 <table>
@@ -87,37 +94,31 @@ function borrar() {
           <tbody>
             
               @foreach( $solicitud as $solicituds)
-              <tr>
-                <th>{{$solicituds->nombre_proyecto}}</th>
-                <th>{{$solicituds->producto}}</th>
-                <th>{{$solicituds->asesor}}</th>
-                <th>{{$solicituds->revisor1}}</th>
-                <th>{{$solicituds->revisor2}}</th>
+              <tr data-id="{{$solicituds->nombre_proyecto}}">
+                <td>{{$solicituds->nombre_proyecto}}</td>
+                <td>{{$solicituds->producto}}</td>
+                <td>{{$solicituds->asesor}}</td>
+                <td>{{$solicituds->revisor1}}</td>
+                <td>{{$solicituds->revisor2}}</td>
+                <td>
+                  <a href="#" class="btn bnt-primary">Asignar asesores
+                    <i class="fa fa-pencil-square-o"></i>
+                  </a>
+                </td>
               </tr>
               @endforeach
             
           </tbody>
         </table>
       </div>  
+      <!-------------------------------------->
+      <div class="col-md-6">
+        <div id="demo" class="collapse">
 
-      <div class="col-md-2">
-      <div class="container col-md-12 col-md-offset-12">
-        
-          
-              @include('flash::message')
-             <div class="panel-body">
-                    {{ csrf_field() }}
-                    {!! Form::open( array ('url'=> 'nuevoreg', 'method'=> 'POST'))!!}
-                        {!! Field::text('asesor' , ['label'=>'Asesor'] )!!}
-                        {!! Field::text('rev1' , ['label'=>'Revisor 1'] )!!}
-                        {!! Field::text('rev2' , ['label'=>'Revisor 2'] )!!}
-                       
-                        {!! Form::submit('Registrar', ['class' => 'btn btn-success']) !!}
-                    {!! Form::close() !!}
-                    
-              </div>
-      </div>
-      </div>  
+        </div>
+      </div> 
+
+<!--      -->
   </div>
   </div>
 </div>
@@ -194,17 +195,55 @@ function borrar() {
               <th>Nombre Profesor</th>
               <th>Categoría</th>
               <th>Clave Depto</th>
+              <th><th>
             </tr>
           </thead>
           <tbody>
               @foreach( $profesor as $profesors)
               <tr>
-                <th>{{$profesors->RFC}}</th>
-                <th>{{$profesors->nombre_profe}}</th>
-                <th>{{$profesors->categoria}}</th>
-                <th>{{$profesors->cve_depto}}</th>
+                <td>{{$profesors->RFC}}</td>
+                <td>
+                  <div class="panel-group">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">{{$profesors->nombre_profe}}</a>
+                      </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                      <ul class="list-group">
+                        <table class="table">
+                        <thead>
+                          <li class="list-group-item"><tr>
+                            <th>Nombre de Proyecto</th>
+                            <th>Producto</th>
+                            <th>No Control</th>
+                          </tr></li>
+                        </thead>
+                        <tbody>
+                          
+                            @foreach( $solicitud as $solicituds)
+                            <li class="list-group-item"><tr>
+                              <th>{{$solicituds->nombre_proyecto}}</th>
+                              <th>{{$solicituds->producto}}</th>
+                              <th>{{$solicituds->no_control}}</th>
+                            @endforeach
+    
+                        </tbody>
+                      </table>
+                      </ul>
+                    </div>
+                  </div>
+                  </div>
+                </td>
+                <td>{{$profesors->categoria}}</td>
+                <td>{{$profesors->cve_depto}}</td>
               </tr>
               @endforeach
+
+
+
+     
             
           </tbody>
         </table>
@@ -219,4 +258,18 @@ function borrar() {
 
 <!--  -->
 </div>
+@endsection
+
+
+@section('scripts')
+
+<script>
+  $(document).ready(function(){
+    $('.btn bnt-primary').click(function(){
+        alert("boton llamado");
+    });
+    
+  });
+</script>
+
 @endsection
