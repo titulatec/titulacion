@@ -2,12 +2,15 @@
 
 @section('content')
 
+<div class="container">
+    @include('flash::message')
+</div>
+
 <div class="container centrado-porcentual">
     <div class="row">
         <div class="container col-md-7 col-md-offset-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">Registro Foraneo</div>
-                @include('flash::message')
 
  {{ Form::open(array('url' => 'registro', 'method' => 'POST'), array('role' => 'form')) }}
 
@@ -62,15 +65,17 @@
       {{ Form::text('full_producto', null, array('placeholder' => 'Introduce el producto', 'class' => 'form-control')) }}        
     </div>
   </div>
-  
 
-  {{ Form::button('Crear usuario', array('type' => 'submit', 'class' => 'btn btn-primary')) }} 
+  {{ Form::button('GUARDAR', array('type' => 'submit', 'class' => 'btn btn-primary')) }} 
    
-  
 {{ Form::close() }}
 
-<div class="row">
-  <<div class="form-group col-md-6">
-  <a href="{{ action('divisionController@fora')}}"><button class="btn btn-suc">REGRESAR</button></a></h3></div>
+<td>
+ 	<div class="row">
+  		<div class="form-group col-md-6">
+  			<a href="{{ action('divisionController@fora')}}"><button class="btn btn-danger">REGRESAR</button></a></div>
+ 	</div>
+ </td>
+
 
 @endsection

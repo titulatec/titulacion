@@ -5,7 +5,7 @@
 
 <div class="row">
 	<div clss="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3><h3>LLista de Alumnos-Foraneos <a href="{{ action('divisionController@div_create')}}"><button class="btn bnt-primary">Alta Foraneos</button></a></h3>
+		<h3>LLista de Alumnos-Foraneos <a href="{{ action('divisionController@div_create')}}"><button class="btn btn-primary">Alta Foraneos</button></a></h3>
 </div>
 
 <div class="container centrado-porcentual">
@@ -29,13 +29,10 @@
 				<th>Plan de Estudios</th>
 				<th>Opcion de Titulacion</th>
 				<th>Producto</th>
+				<th>Tipo</th>
 				<th>Asesor</th>
 				<th>Revisor1</th>
 				<th>Revisor2</th>
-				<th>Tipo</th>
-				<th></th>
-				<th>Editar</th>
-				<th>Aprobar</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -53,7 +50,12 @@
 						<td>{{$foraneos->producto}}</td>
 						<td>{{$foraneos->tipo}}</td>
 					<td>
-						<a href="{{ action('divisionController@div_edit')}}"><button class="btn bnt-primary">Edit</button>
+						<a href="{{ action('divisionController@div_edit')}}"><button class="btn btn-danger">Editar</button>
+							<i class="fa fa-pencil-square-o"></i>
+						</a>
+					</td>
+					<td>
+						<a href="#"><button class="btn btn-success">ENVIAR</button>
 							<i class="fa fa-pencil-square-o"></i>
 						</a>
 					</td>
