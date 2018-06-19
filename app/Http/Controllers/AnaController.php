@@ -24,9 +24,9 @@ class AnaController extends Controller
         **/
         $products = Alumno::all(); 
 
-        $pdf = PDF::loadView('pdf.products', compact('products'));
+        $pdf = PDF::loadView('layouts.pdf', compact('products'));
 
-        return $pdf->download('listado.pdf');
+        return $pdf->stream('listado.pdf');
     }
 
 
