@@ -24,7 +24,6 @@ class CreateProfesorsTable extends Migration
             $table->timestamps();
 
         });
-
     }
 
    
