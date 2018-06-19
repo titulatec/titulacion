@@ -66,4 +66,23 @@ Route::post('/registrar_proyecto', 'AlumnoController@registrar_proyecto');
 Route::get('/jaime', 'JaimeController@index')->name('jaime-alumnos');
 Route::get('jaime-descargar-alumnos', 'JaimeController@pdf')->name('jaime-alumnos.pdf');
 
+Route::get('/alma', 'AlmaController@index')->name('alma-alumnos');
+Route::get('alma-descargar-alumnos', 'AlmaController@pdf')->name('alma-alumnos.pdf');
+
+
+Route::get('/jesus', 'jesusController@index')->name('jesus-alumnos');
+Route::get('jesus-descargar-alumnos', 'jesusController@pdf')->name('jesus-alumnos.pdf');
+
+
+Route::get('/ana', 'AnaController@index')->name('ana-alumnos');
+Route::get('ana-descargar-alumnos', 'AnaController@pdf')->name('ana-alumnos.pdf');
+
+
+Route::get('/mariela', 'MarielaController@index')->name('mariela-alumnos');
+Route::get('mariela-descargar-alumnos', 'MarielaController@pdf')->name('mariela-alumnos.pdf');
+
+Route::get('/araceli', 'AraceliController@index')->name('araceli-alumnos');
+Route::get('araceli-descargar-alumnos', 'AraceliController@pdf')->name('araceli-alumnos.pdf');
+
+
 
