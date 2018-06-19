@@ -5,15 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Alumno;
 use Barryvdh\DomPDF\Facade as PDF;
-
-class JaimeController extends Controller
+class LaloController extends Controller
 {
-    //
-	public function index()
+    public function index()
     {
         $products = Alumno::all();
 
-        return view('layouts.jaime', compact('products'));
+        return view('layouts.lalo', compact('products'));
     }
 
     public function pdf()
@@ -22,15 +20,10 @@ class JaimeController extends Controller
          * toma en cuenta que para ver los mismos 
          * datos debemos hacer la misma consulta
         **/
-       $products = Alumno::all(); 
+        $products = Alumno::all(); 
 
-       $pdf = PDF::loadView('layouts.pdf', compact('products'));
+        $pdf = PDF::loadView('layouts.pdf', compact('products'));
 
-       return $pdf->stream('alumnos.pdf');
+        return $pdf->stream('listado.pdf');
     }
-
-
-
-
-
 }
