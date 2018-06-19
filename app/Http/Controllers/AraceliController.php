@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Alumno;
-use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade as PDF;
 
 
