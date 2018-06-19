@@ -26,7 +26,7 @@ class JaimeController extends Controller
 
        $pdf = PDF::loadView('layouts.pdf', compact('products'));
 
-       return $pdf->download('alumnos.pdf');
+       return $pdf->stream('alumnos.pdf');
     }
 
 
