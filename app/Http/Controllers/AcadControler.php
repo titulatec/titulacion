@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Solicitud;
 use App\Profesor;
+use App\Alumno;
 use DB;
 use Laracasts\Flash\Flash;
 use Excel;
@@ -25,9 +26,18 @@ class AcadControler extends Controller
     public function index(){
         $solicitud = Solicitud::all();
         $profesor = Profesor::all();
+        //$profesor = Profesor::where('nombre_proyecto','=',$solicitud->nombre_proyecto);
+        //$alumno = Alumno::where('no_control','=',$solicitud->no_control);
+
+       // $alumno = DB::table('alumnos')->where('mail', Auth::user()->email )->get()->first();
+        //$solicitud = Solicitud::where ('no_control','=',$alumno->no_control)->get()->first();
 
         //return view ('academico.deptoacad', compact('solicitud', 'asesores'));
-        return view ('academico.deptoacad', compact('solicitud', 'profesor'));
+
+        //$solicitudes = Solicitud::join("alumnos","solicituds.no_control","=","alumnos.no_control")
+        //->get();
+
+        return view ('academico.deptoacad', compact('solicitud', 'profesor', 'alumno'));
 
     }
 
