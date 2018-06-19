@@ -61,3 +61,9 @@ Route::post('/registrar_proyecto', 'AlumnoController@registrar_proyecto');
 //===========================================================================
 
 
+
+//Comentarios de prueba
+Route::get('/jaime', 'JaimeController@index')->name('jaime-alumnos');
+Route::get('jaime-descargar-alumnos', 'JaimeController@pdf')->name('jaime-alumnos.pdf');
+
+
