@@ -22,7 +22,6 @@ class divisionController extends Controller
 
     public function index(){
 
-
         return view ('divestudios.div_estudios');
     
     }
