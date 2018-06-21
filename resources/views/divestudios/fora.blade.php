@@ -38,9 +38,7 @@
 				<th>Opcion de Titulacion</th>
 				<th>Producto</th>
 				<th>Tipo</th>
-				<th>Asesor</th>
-				<th>Revisor1</th>
-				<th>Revisor2</th<
+				<th>Opciones</th>
 			</tr>
 			</thead>
 			<tbody>
