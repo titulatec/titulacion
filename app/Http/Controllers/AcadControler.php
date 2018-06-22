@@ -34,11 +34,10 @@ class AcadControler extends Controller
 
         //return view ('academico.deptoacad', compact('solicitud', 'asesores'));
 
-        $consulta = Solicitud::join("alumnos","solicituds.no_control","=","alumnos.no_control")
-        //->where('nombre_profe','=',)
-        ->get();
+        //$solicitudes = Solicitud::join("alumnos","solicituds.no_control","=","alumnos.no_control")
+        //->get();
 
-        return view ('academico.deptoacad', compact('solicitud', 'profesor', 'consulta'));
+        return view ('academico.deptoacad', compact('solicitud', 'profesor', 'alumno'));
 
     }
 
@@ -79,18 +78,6 @@ class AcadControler extends Controller
                                                                                                                                                                                                  
     }
     
-    public function destroy($id)
-    {
-        $profesor = Profesor::find($id);
-        $profesor->delete();
-        return redirect()->back();
-    }
-
-    public function edit($id)
-    {
-        $profesor = Profesor::find($id);
-        return \View::make('update',compact('profesor'));
-    }
 
 
 

@@ -4,17 +4,13 @@
 
 <script type="text/javascript">
 
-/*function borrar() {
+function borrar() {
   tab = document.getElementById('tablita');
   for (i=tab.getElementsByTagName('input').length-1; i>=0; i--) {
     chk = tab.getElementsByTagName('input')[i];
     if (chk.checked)
       tab.removeChild(chk.parentNode.parentNode);
   }
-}*/
-function abrir() {
-      
-      window.open("http://www.byspel.com","byspel","width=1200,height=750,menubar=no");
 }
 </script>
 
@@ -45,11 +41,20 @@ function abrir() {
                     </ul>
                   </div>
             </nav>
-  
+
+<div>
+<a href="" class="btn bnt-primary">Asignar asesores
+  <i class="fa fa-pencil-square-o"></i>
+</a>
+
+</div>
+            
+
+
 <!------------------------.. -->
 
 <div class="tab-content">
-
+@include('flash::message')
 <!-- -->
 <div id="menu1" class="tab-pane fade">
 
@@ -81,7 +86,7 @@ function abrir() {
                 <td>{{$solicituds->revisor1}}</td>
                 <td>{{$solicituds->revisor2}}</td>
                 <td>
-                  <a href="" class="bnt-primary">Asignar asesores
+                  <a href="#" class="btn bnt-primary">Asignar asesores
                     <i class="fa fa-pencil-square-o"></i>
                   </a>
                 </td>
@@ -113,7 +118,6 @@ function abrir() {
             <div class="panel panel-primary">
 
                 <div class="panel-heading">Registrar Residencias</div>
-                @include('flash::message')
                 
                 <div class="panel-body">
                     {{ csrf_field() }}
@@ -150,7 +154,7 @@ function abrir() {
             <h1>Profesores</h1>
     </div>
 
-    <!--<div class="row">
+    <div class="row">
     <div class="col-md-1">
       <div class="container col-md-3 col-md-offset-1">
       
@@ -165,7 +169,7 @@ function abrir() {
               </div>
       </div>
     </div>   <br>
-  </div> -->
+  </div>
 
   <div class="row">
       <div class="col-md-7">
@@ -198,18 +202,16 @@ function abrir() {
                           <li class="list-group-item"><tr>
                             <th>Nombre de Proyecto</th>
                             <th>Producto</th>
-                            <th>Nombre</th>
+                            <th>No Control</th>
                           </tr></li>
                         </thead>
                         <tbody>
                           
-                            @foreach( $consulta as $consultas)
-                            <li class="list-group-item"><tr data-id="{{$consultas->nombre_profe}}">
-                              <th>{{$consultas->nombre_proyecto}}</th>
-                              <th>{{$consultas->producto}}</th>
-                              <th>{{$consultas->nombre}}</th>
-                              <th>{{$consultas->apellido_p}}</th>
-                              <th>{{$consultas->apellido_m}}</th>
+                            @foreach( $solicitud as $solicituds)
+                            <li class="list-group-item"><tr>
+                              <th>{{$solicituds->nombre_proyecto}}</th>
+                              <th>{{$solicituds->producto}}</th>
+                              <th>{{$solicituds->no_control}}</th>
                             @endforeach
     
                         </tbody>
@@ -221,9 +223,6 @@ function abrir() {
                 </td>
                 <td>{{$profesors->categoria}}</td>
                 <td>{{$profesors->cve_depto}}</td>
-                <td>
-                  <a class="btn btn-danger btn-xs" href="{{ route('profes/destroy',['id' => $profesors->id] )}}" >Delete</a>
-                </td>
               </tr>
               @endforeach
 
@@ -251,7 +250,7 @@ function abrir() {
 
 <script>
   $(document).ready(function(){
-    $('.bnt-primary').click(function(){
+    $('.btn bnt-primary').click(function(){
         alert("boton llamado");
     });
     
