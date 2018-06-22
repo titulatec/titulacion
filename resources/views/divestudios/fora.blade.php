@@ -5,12 +5,22 @@
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
 		<a href="{{ action('divisionController@div_create')}}"><button class="btn btn-success">Alta Foraneos</button></a>
+
+	
+	{!! Form::open( array ('url'=> 'fora', 'method'=> 'GET', 'class' => 'navbar-form navbar-left pull-right', 'roles' => 'search' ))!!}
+			<div class="form-group">
+			{!! Form::text('name', null, ['class' => 'form-control', 'placeholder' =>'Nombre de usuario']) !!}
+		</div>
+		<button type="submit" class="btn btn-default">Buscar</button>
+		{!! Form::close() !!}
+	</form>
 	
 	<br><br>
-    
+
     <div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
     <div class="panel panel-primary">
                 <div class="panel-heading">LISTA DE ALUMNOS</div>
+
     <table class="table table-hover table-striped">
 
 </div>
@@ -28,9 +38,7 @@
 				<th>Opcion de Titulacion</th>
 				<th>Producto</th>
 				<th>Tipo</th>
-				<th>Asesor</th>
-				<th>Revisor1</th>
-				<th>Revisor2</th<
+				<th>Opciones</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -53,7 +61,7 @@
 						</a>
 					</td>
 					<td>
-						<a href="#"><button class="btn btn-success">ENVIAR</button>
+						<a href="#"><button class="btn btn-success">APROBAR</button>
 							<i class="fa fa-pencil-square-o"></i>
 						</a>
 					</td>
