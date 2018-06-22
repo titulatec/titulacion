@@ -24,6 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/deptoacad', 'AcadControler@index');
 Route::post('/residencias_registro', 'AcadControler@reg_residencia');
 Route::post('/nuevoreg', 'AcadControler@agregar_asesores');
+Route::get('/eliminar/{id}', ['as' => 'profes/destroy', 'uses'=>'AcadControler@destroy']);
 
 //============================================================================
 

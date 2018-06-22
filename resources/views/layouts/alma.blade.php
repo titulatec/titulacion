@@ -35,7 +35,22 @@
 
 </div>
 
+<div>
+    <input type="button" value="Abrir" onclick="abrir()"/>
+</div>
 
 
 
+@endsection
+
+@section('scripts')
+<script type="text/Javascript">
+    function abrir() {
+      
+      window.open("http://www.byspel.com","byspel","width=1200,height=750,menubar=no");
+    }
+    
+    
+
+</script>
 @endsection
