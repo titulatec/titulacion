@@ -6,7 +6,7 @@
 		<div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
 		<a href="{{ action('divisionController@div_create')}}"><button class="btn btn-success">Alta Foraneos</button></a>
 
-	
+
 	{!! Form::open( array ('url'=> 'fora', 'method'=> 'GET', 'class' => 'navbar-form navbar-left pull-right', 'roles' => 'search' ))!!}
 			<div class="form-group">
 			{!! Form::text('name', null, ['class' => 'form-control', 'placeholder' =>'Nombre de usuario']) !!}
@@ -14,7 +14,7 @@
 		<button type="submit" class="btn btn-default">Buscar</button>
 		{!! Form::close() !!}
 	</form>
-	
+
 	<br><br>
 
     <div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
@@ -70,7 +70,7 @@
     		</tbody>
     	</table>
 	</div>
-    
+
 </div>
 
 @endsection

@@ -35,11 +35,8 @@ Route::get('/div_estudios/div_create', 'divisionController@div_create');
 Route::get('/div_estudios/div_interno', 'divisionController@div_interno');
 Route::get('/div_estudios/div_edit', 'divisionController@div_edit');
 
-//===========================================================================
-
-//Bloque para Eric ==========================================================
-
-
+//
+Route::get('/div_estudios/div_horaisctics','divisionController@div_horaisctics');
 //===========================================================================
 
 //Bloque para Mariela ==========================================================
@@ -56,6 +53,7 @@ Route::post('/admin_registro', 'AdminController@agregar_personal');
 Route::post('/admin_alumnos', 'AdminController@agregar_alumnos');
 Route::post('/cargar_datos_usuarios', 'AdminController@cargar_datos_usuarios');
 Route::post('/registrar_proyecto', 'AlumnoController@registrar_proyecto');
+
 
 //Comentario nuevo de jaime
 //===========================================================================

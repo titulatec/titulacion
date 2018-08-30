@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app') 
 
 @section('content')
 <style >
@@ -111,6 +111,8 @@
         </div>
     </div>
 </div>
+
+
 <div class="row">
         <div class="container col-md-10 col-md-offset-1">
             <div class="panel panel-primary">
