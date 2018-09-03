@@ -8,6 +8,7 @@ use App\User;
 use App\Producto;
 use App\Proyecto;
 use App\Solicitud;
+use App\Fecha;
 use App\Http\Controllers\Controller;
 use DB;
 use ConsultasAlumno;
@@ -23,8 +24,11 @@ class AlumnoController extends Controller
         $this->middleware('auth');
         $this->middleware('is_alum');
     }
-
+ 
     public function index(){
+        return view('alumno.index'); 
+    }
+    public function proceso(){
        // $productos = Producto::all();
         $alumno = DB::table('alumnos')->where('mail', Auth::user()->email )->get()->first();
         $solicitud = Solicitud::where ('no_control','=',$alumno->no_control)->get()->first();
@@ -74,5 +78,10 @@ class AlumnoController extends Controller
         return back();
                                                                                                                                                                                                  
     }
+    public function ver_fechas()
+    {
+        $fecha = Fecha::all();
+        return view('alumno.ver_fechas', compact('fecha'));
+    } 
 
 }

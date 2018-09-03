@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+  
 <nav class="navhar navbar-default">
     <div class="container">
     	<div class="navbar-header">
@@ -11,28 +11,29 @@
             	<span class="ico-bar"></span>
             	<span class="ico-bar"></span>
         	</button>
-        	<a class="navbar-brand" href="{{ action('divisionController@index')}}">Division de Estudios</a>
+        	<a class="navbar-brand" href="#">Alumno</a>
         </div>
 
 		<div class="collapse navbar-collapse" id="bs-example-nabar-collage-1">
 			<ul class="nav navbar-nav">
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU <span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ action('divisionController@fora')}}">Solictudes</a></li>
-						<li><a href="#">Residencias</a></li></li>
+						<li><a href="{{ action('AlumnoController@proceso')}}">Proceso</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Horario</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ action('divisionController@hora_isctics')}}">Horarios de titulacion</a></li>
+						<li><a href="{{ action('AlumnoController@ver_fechas')}}">Elegir Hora</a></li>
+						<li><a href="#">Ver Horario</a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
+
 
 
 @endsection

@@ -36,7 +36,10 @@ Route::get('/div_estudios/div_interno', 'divisionController@div_interno');
 Route::get('/div_estudios/div_edit', 'divisionController@div_edit');
 
 //
-Route::get('/div_estudios/div_horaisctics','divisionController@div_horaisctics');
+Route::post('/registra','divisionController@registra_fecha');
+Route::get('/div_estudios/fecha_create', 'divisionController@fecha_create');
+Route::get('/div_estudios/hora_isctics','divisionController@hora_isctics');
+
 //===========================================================================
 
 //Bloque para Mariela ==========================================================
@@ -46,9 +49,11 @@ Route::get('/div_estudios/div_horaisctics','divisionController@div_horaisctics')
 
 //Bloque para Jaime==========================================================
 
-Route::get('/alumno', 'AlumnoController@index');
+Route::get('/alumno', 'AlumnoController@index'); //New modified
+Route::get('/alumno/alumno', 'AlumnoController@proceso');  //New modified
+Route::get('/alumno/ver_fechas', 'AlumnoController@ver_fechas');  //New modified 
 Route::get('/admin', 'AdminController@index');
-Route::get('/alumno/veralumnos', 'AlumnoController@veralumnos')->name('veralumnos');
+Route::get('/alumno/veralumnos', 'AlumnoController@veralumnos')->name('veralumnos'); //No existe fichero
 Route::post('/admin_registro', 'AdminController@agregar_personal');
 Route::post('/admin_alumnos', 'AdminController@agregar_alumnos');
 Route::post('/cargar_datos_usuarios', 'AdminController@cargar_datos_usuarios');

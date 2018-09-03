@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Alumno;
+use App\Fecha;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
@@ -21,7 +22,7 @@ class divisionController extends Controller
     public function index()
     {
 
-        return view('divestudios.div_estudios');
+        return view('divestudios.div_estudios'); 
 
     }
 
@@ -97,7 +98,33 @@ class divisionController extends Controller
     }
     public function hora_isctics()
     {
-        return view('div_estudios.hora_isctics');
+        $fecha = Fecha::all();
+        return view('divestudios.hora_isctics', compact('fecha'));
+    }
+    public function fecha_create()
+    {
+        return view('divestudios.fecha_create');
+    }
+     public function registra_fecha(Request $data)
+    {
+        try {
+            Fecha::create([
+                'fecha'                       => $data['full_date'],
+                'hora'                        => $data['full_time'],
+                'lugar'                       => $data['full_luga'],
+                'carrera'                     => $data['full_carre'],
+                'espacios_disponibles'        => $data['full_espa_di'],
+            ]);
+
+            Flash::success("Se ha registrado de forma exitosa");
+
+        } catch (\Illuminate\Database\QueryException $e) {
+
+            Flash::error("Se ha presentado un error con las datos favor de verificarlos4 ");
+        }
+
+        return back();
+
     }
 
 }
