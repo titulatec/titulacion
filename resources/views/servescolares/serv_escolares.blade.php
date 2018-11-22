@@ -11,29 +11,24 @@
             	<span class="ico-bar"></span>
             	<span class="ico-bar"></span>
         	</button>
-        	<a class="navbar-brand" href="{{ action('divisionController@index')}}">Division de Estudios</a>
+        	<a class="navbar-brand" href="{{ action('divisionController@index')}}">Servicios Escolares</a>
         </div>
 
 		<div class="collapse navbar-collapse" id="bs-example-nabar-collage-1">
 			<ul class="nav navbar-nav">
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio<span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ action('divisionController@fora')}}">Solictudes</a></li>
+						<li><a href="#">Solictudes</a></li>
 						<li><a href="#">Residencias</a></li></li>
 					</ul>
 				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Horario</a>
-					<ul class="dropdown-menu">
-						<li><a href="{{ action('divisionController@hora_isctics')}}">Horarios de titulacion</a></li>
-						<li><a href="{{ action('divisionController@all_alumnos')}}">Alumnos a titular</a></li>
-					</ul>
+				
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proximos a titularse</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ action('divisionController@div_formulario')}}">Listado</a></li>
+						<li><a href="{{ action('EscolaresController@form')}}">Listado Recibido</a></li>
 					</ul>
 				</li>
 			</ul>

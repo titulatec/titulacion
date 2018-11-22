@@ -43,6 +43,13 @@ class CreateUsersTable extends Migration
             'password' => bcrypt('academico'),
             'rol'=>'jefe']);
 
+
+        User::create([
+            'name' => 'Servicios Escolares',
+            'email' => 'escolares@itsjr.com',
+            'password' => bcrypt('escolares'),
+            'rol'=>'esc']);
+
     }
 
     /**

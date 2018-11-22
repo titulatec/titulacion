@@ -59,6 +59,10 @@ class LoginController extends Controller
             return '/div_estudios';
         }
 
+        if (Auth::user()->rol=='esc') {
+            return '/serv_escolares';
+        }
+
         
         
     }

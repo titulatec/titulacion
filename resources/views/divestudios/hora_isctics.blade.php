@@ -1,4 +1,4 @@
-@extends('layouts.app')
+	@extends('layouts.app')
 
 @section('content')
 
@@ -17,31 +17,32 @@
     		<table class="table table-hover table-striped">
     			<thead>
     				<tr>
+    					<th>ID</th>
     					<th>Fecha</th>
 						<th>Hora</th>
 						<th>Lugar</th>
 						<th>Carrera</th>
 						<th>Espacios Disponibles</th>
+						<th>Inscritos</th>
 						<th>Opciones</th>
 					</tr>
 				</thead>
 				<tbody>
 				@foreach ($fecha as $fechas)
 				<tr>
+					<td>{{$fechas->id}}</td>
 					<td>{{$fechas->fecha}}</td>
 					<td>{{$fechas->hora}}</td>
 					<td>{{$fechas->lugar}}</td>
 					<td>{{$fechas->carrera}}</td>
 					<td>{{$fechas->espacios_disponibles}}</td>
+					<td>{{$fechas->inscritos}}</td>
 					<td>
-						<a href="#"><button class="btn btn-success">Editar</button>
-						</a>
-						<a href="#"><button class="btn btn-danger">Eliminar</button>
-						</a>
+						<a href="{{ action('divisionController@fecha_alum')}}"><button class="btn btn-info">Ver</button></a>
+						<a href="" data-target="#modal-delete-{{$fechas->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
 					</td>
 				</tr>
-    			@endforeach
-    			</tbody>
+			@endforeach
     		</table>
 		</div>
 	</div>

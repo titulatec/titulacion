@@ -60,5 +60,6 @@ class Kernel extends HttpKernel
         'is_alum' => \App\Http\Middleware\IsAlum::class,
         'is_division' => \App\Http\Middleware\IsDivision::class,
         'is_jefe' => \App\Http\Middleware\IsAcademico::class, // se agrega para el middleware
+        'is_escolares' => \App\Http\Middleware\IsEscolares::class,
     ];
 }

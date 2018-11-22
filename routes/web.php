@@ -39,12 +39,15 @@ Route::get('/div_estudios/div_edit', 'divisionController@div_edit');
 Route::post('/registra','divisionController@registra_fecha');
 Route::get('/div_estudios/fecha_create', 'divisionController@fecha_create');
 Route::get('/div_estudios/hora_isctics','divisionController@hora_isctics');
-
+Route::get('/div_estudios/fecha_alum','divisionController@fecha_alum');
+Route::get('/div_estudios/all_alumnos','divisionController@all_alumnos');
+Route::get('/div_estudios/div_formulario','divisionController@div_formulario');
 //===========================================================================
 
 //Bloque para Mariela ==========================================================
-
-
+Route::get('/serv_escolares', 'EscolaresController@index');
+Route::get('/serv_escolares/form', 'EscolaresController@form');
+Route::get('/serv_escolares/checklist', 'EscolaresController@checklist');
 //===========================================================================
 
 //Bloque para Jaime==========================================================
@@ -58,6 +61,8 @@ Route::post('/admin_registro', 'AdminController@agregar_personal');
 Route::post('/admin_alumnos', 'AdminController@agregar_alumnos');
 Route::post('/cargar_datos_usuarios', 'AdminController@cargar_datos_usuarios');
 Route::post('/registrar_proyecto', 'AlumnoController@registrar_proyecto');
+
+Route::post('/registrar_hora', 'AlumnoController@registrar_hora');  //New modified
 
 
 //Comentario nuevo de jaime

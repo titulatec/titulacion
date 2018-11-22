@@ -22,7 +22,7 @@ class divisionController extends Controller
     public function index()
     {
 
-        return view('divestudios.div_estudios'); 
+        return view('divestudios.div_estudios');
 
     }
 
@@ -105,15 +105,15 @@ class divisionController extends Controller
     {
         return view('divestudios.fecha_create');
     }
-     public function registra_fecha(Request $data)
+    public function registra_fecha(Request $data)
     {
         try {
             Fecha::create([
-                'fecha'                       => $data['full_date'],
-                'hora'                        => $data['full_time'],
-                'lugar'                       => $data['full_luga'],
-                'carrera'                     => $data['full_carre'],
-                'espacios_disponibles'        => $data['full_espa_di'],
+                'fecha'                => $data['full_date'],
+                'hora'                 => $data['full_time'],
+                'lugar'                => $data['full_luga'],
+                'carrera'              => $data['full_carre'],
+                'espacios_disponibles' => $data['full_espa_di'],
             ]);
 
             Flash::success("Se ha registrado de forma exitosa");
@@ -126,5 +126,25 @@ class divisionController extends Controller
         return back();
 
     }
+    public function fecha_alum()
+    {
+        $fecha = Fecha::all(); 
+        return view('divestudios.fecha_alum',compact('fecha'));
+    }
+    public function all_alumnos()
+    {
+        return view('divestudios.all_alumnos');
+    }
+    public function div_formulario()
+    {
+        $foraneo = Alumno::all();
+        return view('divestudios.div_formulario',compact('foraneo'));
+    }
 
+    public function destroy($id)
+    {
+        $fecha = Fecha::findOrFail($id);
+        $fecha->update();
+        return Redirect::to('divestudios/div_estudios');
+    }
 }
