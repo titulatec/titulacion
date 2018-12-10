@@ -20,7 +20,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio</span></a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ action('divisionController@inicio')}}">Todas las Solictudes</a></li>
-						
+						<li><a href="{{ action('divisionController@status')}}">Status</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -45,7 +45,7 @@
 
 <div class="col-md-6 col-md-offset-3">
 	<div class="panel panel-primary">
-        <div class="panel-heading">LISTA DE ALUMNOS</div>
+        <div class="panel-heading">LISTA DE SOLICITUDES</div>
         <table class="table table-hover table-responsive">
     </div>
     	<thead>
@@ -53,6 +53,7 @@
 	    		<th>Id</th>
 				<th>Descripcion</th>
 				<th>Fecha</th>
+				<th>Opciones</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -60,7 +61,7 @@
 			<tr>
 				<td>{{$fecha->id}}</td>
 				<td>{{$fecha->descripcion}}</td>
-				<td><a href="{{ action('divisionController@fora')}}">{{$fecha->fecha}} - {{$fecha->fecha_fin}}</a></td>
+				<td><a href="{{ action('divisionController@fora',[$fecha->fecha,$fecha->fecha_fin])}}">{{$fecha->fecha}} - {{$fecha->fecha_fin}}</a></td>
 				<td><button class="btn btn-danger" data-fechaid={{$fecha->id}} data-toggle="modal" data-target="#delete">Delete</button></td>
 			</tr>
 			@endforeach

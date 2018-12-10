@@ -23,6 +23,7 @@ class CreateAlumnosTable extends Migration
             $table->string('telefono');
             $table->string('mail')->unique();
             $table->string('tipo');
+            $table->string('fecha');
             $table->string('plan_estud');
             $table->string('opcion_titulacion')->nullable();
             $table->string('producto')->nullable();

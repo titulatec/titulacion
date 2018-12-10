@@ -54,6 +54,7 @@ class AdminController extends Controller
             'telefono' => $data['telefono'],
             'mail' => $data['email'],
             'tipo' => $data['tipo'],
+            'fecha'=> now()->format('Y-m-d'),
             'plan_estud' => $data['plan'],
             'registrado' => 'N'
         ]);

@@ -33,7 +33,7 @@ Route::post('/nuevoreg', 'AcadControler@agregar_asesores');
 Route::get('/div_estudios', 'divisionController@index');
 Route::post('/registro', 'divisionController@agregar_foraneo');
 Route::get('/div_estudios/index', 'divisionController@inicio');
-Route::get('/div_estudios/fora', 'divisionController@fora');
+Route::get('/div_estudios/fora/{fecha}/{fecha_fin}', 'divisionController@fora');
 Route::get('/div_estudios/div_create', 'divisionController@div_create');
 Route::get('/div_estudios/div_interno', 'divisionController@div_interno');
 Route::get('/div_estudios/div_edit', 'divisionController@div_edit');
@@ -48,10 +48,18 @@ Route::get('/div_estudios/div_formulario','divisionController@div_formulario');
 Route::get('/div_estudios/ver_alumno/{id}','divisionController@ver_alumno');
 Route::post('/div_estudios/ver_alumno/{id}','divisionController@update');
 Route::get('/div_estudios/ver_alumno/aprobar/{id}','divisionController@aprobar');
+
+//Status
+Route::get('/div_estudios/status','divisionController@status');
+Route::get('/div_estudios/pendientes','divisionController@pendientes');
+Route::get('/div_estudios/enviadas/index','divisionController@enviadas');
 //===========================================================================
 
 //Bloque para Mariela ==========================================================
 Route::get('/serv_escolares', 'EscolaresController@index');
+Route::get('/serv_escolares/carreras', 'EscolaresController@carreras');
+Route::get('/serv_escolares/industrial/index', 'EscolaresController@industrial');
+
 Route::get('/serv_escolares/form', 'EscolaresController@form');
 Route::get('/serv_escolares/checklist', 'EscolaresController@checklist');
 //===========================================================================

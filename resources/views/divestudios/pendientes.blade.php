@@ -4,7 +4,7 @@
 <div class="row">
 	<div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
 		<!--<a href="{{ action('divisionController@div_create')}}"><button class="btn btn-success">Alta Foraneos</button></a>-->
-		<a href="{{ action('divisionController@inicio')}}"><button class="btn btn-success">Regresar</button></a>
+		<a href="{{ action('divisionController@status')}}"><button class="btn btn-success">Regresar</button></a>
 
 
 	<!--{!! Form::open( array ('url'=> 'fora', 'method'=> 'GET', 'class' => 'navbar-form navbar-left pull-right', 'roles' => 'search' ))!!}
@@ -41,7 +41,7 @@
 				</tr>
 				</thead>
 				<tbody>
-					@foreach ($alumnos as $foraneos)
+					@foreach ($foraneo as $foraneos)
 						<tr>
 							<td>{{$foraneos->no_control}}</td>
 							<td>{{$foraneos->nombre}}</td>
@@ -74,7 +74,6 @@
 	    		</tbody>
 
     			</table>
-    			
 			</div>
 		</div>
 	</div>

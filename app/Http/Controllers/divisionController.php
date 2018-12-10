@@ -49,13 +49,43 @@ class divisionController extends Controller
         return back();
 
     }
-
-    public function fora()
+    /*
+    *Aqui empieza el estatus de solicitudes
+    */
+    public function status()
     {
-        //return view('divestudios.fora');
-        $foraneo = Alumno::All();
-        //$foraneo = Alumno::All()->where('registrado', "=",'N');
-        return view('divestudios.fora', compact('foraneo'));
+
+        return view('divestudios.status');
+
+    }
+    public function pendientes()
+    {
+        $foraneo = Alumno::All()->where('registrado', "=",'N');
+        return view('divestudios.pendientes',compact('foraneo'));
+
+    }
+    public function enviadas()
+    {
+        
+        $fechas = fechas_solicitudes::orderBy('fecha', 'ASC')->get();
+         return view('divestudios.enviadas.index',compact('fechas'));
+
+    }
+
+    //terminar estatus de solicitudes
+
+
+    public function fora(Request $request)
+    {
+        $foraneo = Alumno::select('*')
+            ->join('fechas_solicitudes', 'alumnos.fecha', '=', 'fechas_solicitudes.fecha')
+            ->where('alumnos.fecha', $request->fecha)
+            ->get();
+
+            //return view('divestudios.fora');
+        $alumnos = Alumno::All();
+            //$foraneo = Alumno::All()->where('registrado', "=",'N');
+        return view('divestudios.fora', compact('foraneo','alumnos'));
 
     }
 
@@ -172,7 +202,7 @@ class divisionController extends Controller
         $alumno->registrado ="S";
         $alumno->save();
 
-        return redirect('/div_estudios/fora')->with('success', 'New support ticket has been updated!!');
+        return redirect('/div_estudios/fora/2018-12-03/2018-12-09')->with('success', 'New support ticket has been updated!!');
     }
     /*
     public function update(Request $request, $id)
