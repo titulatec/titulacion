@@ -17,10 +17,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-nabar-collage-1">
 			<ul class="nav navbar-nav">
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio<span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio</span></a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ action('divisionController@fora')}}">Solictudes</a></li>
-						<li><a href="#">Residencias</a></li></li>
+						<li><a href="{{ action('divisionController@inicio')}}">Todas las Solictudes</a></li>
+						
 					</ul>
 				</li>
 				<li class="dropdown">

@@ -17,6 +17,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+//prueba !
+Route::resource('divestudios','divisionController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -30,6 +32,7 @@ Route::post('/nuevoreg', 'AcadControler@agregar_asesores');
 //Bloque para Araceli ==========================================================
 Route::get('/div_estudios', 'divisionController@index');
 Route::post('/registro', 'divisionController@agregar_foraneo');
+Route::get('/div_estudios/index', 'divisionController@inicio');
 Route::get('/div_estudios/fora', 'divisionController@fora');
 Route::get('/div_estudios/div_create', 'divisionController@div_create');
 Route::get('/div_estudios/div_interno', 'divisionController@div_interno');
@@ -42,6 +45,9 @@ Route::get('/div_estudios/hora_isctics','divisionController@hora_isctics');
 Route::get('/div_estudios/fecha_alum','divisionController@fecha_alum');
 Route::get('/div_estudios/all_alumnos','divisionController@all_alumnos');
 Route::get('/div_estudios/div_formulario','divisionController@div_formulario');
+Route::get('/div_estudios/ver_alumno/{id}','divisionController@ver_alumno');
+Route::post('/div_estudios/ver_alumno/{id}','divisionController@update');
+Route::get('/div_estudios/ver_alumno/aprobar/{id}','divisionController@aprobar');
 //===========================================================================
 
 //Bloque para Mariela ==========================================================

@@ -8,6 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
     <!--<title>{{ config('app.name', 'Titulaciones') }}</title>-->
     <title>Titulatec</title>
     <!-- Styles -->
@@ -65,5 +66,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'"></script>
     -->
+
+
+<script>
+
+  $('#edit').on('show.bs.modal', function (event) {
+
+      var button = $(event.relatedTarget) 
+      var nombre = button.data('myname') 
+      var carrera = button.data('carrera') 
+      var no_control = button.data('noc') 
+      var telefono = button.data('telefono') 
+      var mail = button.data('mail') 
+      var plan_estud = button.data('plan_estud')
+      var opcion_titulacion = button.data('opcion_titulacion')  
+      var tipo = button.data('tipo')  
+      var cat_id = button.data('catid') 
+      var modal = $(this)
+
+      modal.find('.modal-body #name').val(nombre);
+      modal.find('.modal-body #carrera').val(carrera);
+      modal.find('.modal-body #noc').val(no_control);
+      modal.find('.modal-body #telefono').val(telefono);
+      modal.find('.modal-body #mail').val(mail);
+      modal.find('.modal-body #plan_estud').val(plan_estud);      
+      modal.find('.modal-body #opcion_titulacion').val(opcion_titulacion);
+      modal.find('.modal-body #tipo').val(tipo);
+      modal.find('.modal-body #cat_id').val(cat_id);
+})
+    $('#delete').on('show.bs.modal', function (event) {
+
+      var button = $(event.relatedTarget) 
+
+      var fechaid = button.data('fechaid') 
+      var modal = $(this)
+
+      modal.find('.modal-body #fechaid').val(fechaid);
+})
+
+
+</script>
 </body>
 </html>
