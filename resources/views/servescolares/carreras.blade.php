@@ -23,12 +23,42 @@
 						<li><a href="#">Residencias</a></li></li>
 					</ul>
 				</li>
-				
-				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
 
+<br><br>
+
+<div class="col-md-3 col-md-offset-4">
+	<div class="panel panel-primary">
+        <div class="panel-heading text-center">CARRERAS</div>
+        <table class="table table-hover table-responsive table-striped table-condensed">
+    </div>
+    	<thead>
+    		<tr>
+				<th class="text-center"></th>				
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="text-center"><a href="{{ action('EscolaresController@industrial')}}">Ing.Industrial</a></td>
+			</tr>
+			<tr>
+				<td class="text-center"><a href="#">Ing.Gestion</a></td>
+			</tr>
+			<tr>
+				<td class="text-center"><a href="#">Ing. Sistemas</a></td>
+			</tr>
+			<tr>
+				<td class="text-center"><a href="#">Ing. Tecnologias</a></td>
+			</tr>
+			<tr>
+				<td class="text-center"><a href="#">Ing. Electronica</a></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</div>
 
 @endsection

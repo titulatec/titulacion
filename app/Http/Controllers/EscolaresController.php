@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\filtrou;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
@@ -21,6 +22,21 @@ class EscolaresController extends Controller
         return view('servescolares.serv_escolares');
 
     }
+    public function carreras()
+    {
+
+        return view('servescolares.carreras');
+
+    }
+    public function industrial()
+    {
+
+        return view('servescolares.industrial.index');
+
+    }
+    /*
+    * Carrera Industrial
+    */
     public function checklist()
     {
 

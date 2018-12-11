@@ -20,7 +20,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio</span></a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ action('divisionController@inicio')}}">Todas las Solictudes</a></li>
-						
+						<li><a href="{{ action('divisionController@status')}}">Status</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -41,5 +41,35 @@
 	</div>
 </nav>
 
+<br><br>
+
+<div class="col-md-4 col-md-offset-4">
+	<div class="panel panel-primary">
+        <div class="panel-heading">STATUS DE SOLICITUDES</div>
+        <table class="table table-hover table-responsive table-striped table-condensed">
+    </div>
+    	<thead>
+    		<tr>
+				<th class="text-center">Descripcion</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="text-center">Listas A</td>
+				<td><a href="{{ action('divisionController@enviadas')}}">Enviadas</a></td>
+			</tr>
+			<tr>
+				<td class="text-center">Listas B</td>
+				<td><a href="{{ action('divisionController@pendientes')}}">Pendientes</a></td>
+			</tr>
+			<tr>
+				<td class="text-center">Listas C</td>
+				<td><a href="#">Liberados(SE)</a></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</div>
 
 @endsection
